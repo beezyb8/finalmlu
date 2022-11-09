@@ -1,0 +1,31 @@
+body{
+    background-color: gainsboro;
+    margin: 10px;
+    /* EDIT AT LATER DATE */
+}
+
+.link-bucks{
+    border: 5px solid black;
+}
+
+.login-link-buck{
+    margin: 20px 0px;
+    position: relative;
+    left: 25%;
+}
+
+.register-link-buck{
+    margin: 20px 0px;
+    position: relative;
+    left: 55%;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    text-shadow: 3px black;
+    color: red;
+}
