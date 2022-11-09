@@ -13,7 +13,8 @@
     <link rel="stylesheet" href="css/login_reg.css">
 </head>
 <body>
-    <form class="entire-bin">
+    <h2>Login</h2>
+    <form class="entire-bin js-login">
         <div class="bin-bin-bin">
             <div class="login-password-bin">
                 <label class="login-password-header" for="form-stacked-text">Email</label>

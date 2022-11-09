@@ -13,7 +13,8 @@
     <link rel="stylesheet" href="css/login_reg.css">
 </head>
 <body>
-    <form class="entire-bin">
+    <h2>Register</h2>
+    <form class="entire-bin js-register">
         <div class="bin-bin-bin">
             <div class="login-password-bin">
                 <label class="login-password-header" for="form-stacked-text">Email</label>
@@ -28,9 +29,15 @@
                     <input class="password-bin" id="form-stacked-text" type="password" placeholder="password" required="required">
                 </div>
             </div>
+            <div class="login-password-bin">
+                <label class="login-password-header" for="form-stacked-select">Password</label>
+                <div class="login-password-input-bin">
+                    <input class="password-bin" id="form-stacked-text" type="password" placeholder="password" required="required">
+                </div>
+            </div>
 
             <div class="submit-bin">
-                <button class="submit-button">Login</button>
+                <button class="submit-button">Register</button>
             </div>
         </div>
     </form>
