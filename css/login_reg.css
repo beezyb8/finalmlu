@@ -1,10 +1,14 @@
+body{
+    background-color: black;
+}
+
 .bin-bin-bin{
     margin: 0;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: green;
+    background-color: white;
     width: 50%;
     height: max-content;
 }

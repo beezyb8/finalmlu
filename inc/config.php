@@ -4,4 +4,8 @@
     }
 
     define('__ALLOWFOOTER__', true);
+
+    include_once "classes/DB.php";
+
+    $con = DB::getconnection();
 ?>

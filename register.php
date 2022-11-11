@@ -29,12 +29,8 @@
                     <input class="password-bin" id="form-stacked-text" type="password" placeholder="password" required="required">
                 </div>
             </div>
-            <div class="login-password-bin">
-                <label class="login-password-header" for="form-stacked-select">Password</label>
-                <div class="login-password-input-bin">
-                    <input class="password-bin" id="form-stacked-text" type="password" placeholder="password" required="required">
-                </div>
-            </div>
+
+            <div class="js-error" style='display: none;'>Test</div>
 
             <div class="submit-bin">
                 <button class="submit-button">Register</button>
