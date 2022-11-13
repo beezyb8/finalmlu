@@ -10,6 +10,7 @@
     define('__ALLOWFOOTER__', true);
 
     include_once "classes/DB.php";
+    include_once "functions.php";
 
     $con = DB::getconnection();
 ?>

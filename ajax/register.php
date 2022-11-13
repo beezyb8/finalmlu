@@ -30,7 +30,7 @@
 
             $_SESSION['user_id'] = (int) $user_id;
 
-            $return['redirect'] = '../finalmlu/login.php?message=welcome';
+            $return['redirect'] = '../finalmlu/login.php?message=loginbro';
             $return['is_logged_in'] = true;
 
 

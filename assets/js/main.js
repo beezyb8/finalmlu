@@ -61,7 +61,7 @@ $(document)
 })
 
 $(document)
-.on("submit", "form.js-login", function(event){
+.on("submit", "form.js-login", function(event) {
     event.preventDefault();
 
     var $form = $(this);
