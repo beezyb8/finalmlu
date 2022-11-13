@@ -10,15 +10,13 @@
         $email = $_POST['email'];
         $password = $_POST['password'];
 
-        $findUser = $con->prepare("SELECT user_id, password FROM users WHERE email = LOWER(:email) LIMIT 1");
-        $findUser->bindParam(':email',$email, PDO::PARAM_STR);
-        $findUser->execute();
 
-        if($findUser -> rowCount() == 1) {
+        $user_found = User::Find($email, true);
+
+        if($user_found) {
             // User exists
-            $User = $findUser->fetch(PDO::FETCH_ASSOC);
-            $user_id = (int) $User['user_id'];
-            $hash = $User['password'];
+            $user_id = (int) $user_found['user_id'];
+            $hash = $user_found['password'];
 
             if(password_verify($password, $hash)){
                 //User is in

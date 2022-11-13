@@ -2,7 +2,8 @@
     define('__CONFIG__', true);
     require_once "inc/config.php";
 
-    ForceLogin()
+    Page::ForceLogin();
+    $User = new User($_SESSION['user_id']);
 ?>
 
 
@@ -15,7 +16,8 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>dashboard here</h1>
-    
+    <h1>Dashboard</h1>
+    <p>Hello <?php echo $User->email; ?> you registered at <?php echo $User->reg_date;?></p>
+    <a href="logout.php">Click Here to logout</a>
 </body>
 </html>

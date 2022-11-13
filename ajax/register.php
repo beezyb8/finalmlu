@@ -6,14 +6,12 @@
     if($_SERVER['REQUEST_METHOD']=='POST'){
         header('Content-Type: application/json');
         $return = [];
-
         $email = $_POST['email'];
 
-        $findUser = $con->prepare("SELECT user_id FROM users WHERE email = LOWER(:email) LIMIT 1");
-        $findUser->bindParam(':email',$email, PDO::PARAM_STR);
-        $findUser->execute();
 
-        if($findUser -> rowCount() == 1) {
+        $user_found = User::Find($email);
+
+        if($user_found) {
             // User exists
             $return['error'] = "There is already an account registered with this email, text 15166402417";
             $return['is_logged_in'] = false;
