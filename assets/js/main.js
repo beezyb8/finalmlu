@@ -36,11 +36,11 @@ $(document)
 
     .done(function ajaxDone(data) {
         if(data.redirect !== undefined) {
-            window.location = data.redirect
+            window.location = data.redirect;
         } else if(data.error !== undefined) {
             $error
-            .text(data.error)
-            .show()
+            .html(data.error)
+            .show();
         }
 
     })
@@ -75,13 +75,13 @@ $(document)
     if(userstuff.email.length < 6) {
         $error
             .text("Please enter a valid email address")
-            .show()
-        return false
+            .show();
+        return false;
     } else if (userstuff.password.length < 6){
         $error
-        .text("Password must be greater then 6 characters")
-        .show()
-    return false
+            .text("Password must be greater then 6 characters")
+            .show();
+    return false;
     }
 
     //Begin AJAX process
@@ -90,7 +90,7 @@ $(document)
 
     $.ajax({
         type: 'POST',
-        url: (_form.hasClass('.js-login') ? '../finalmlu/ajax/login.php' : '../finalmlu/ajax/register.php'),
+        url: '../finalmlu/ajax/login.php',
         data: userstuff,
         dataType: 'json',
         async: true,
@@ -98,12 +98,12 @@ $(document)
 
     .done(function ajaxDone(data) {
         if(data.redirect !== undefined) {
-            window.location = data.redirect
+            window.location = data.redirect;
 // REDIRECT TO HOMMEPAGE OR DASHBOARD
         } else if(data.error !== undefined) {
             $error
-            .text(data.error)
-            .show()
+            .html(data.error)
+            .show();
         }
 
     })
@@ -116,9 +116,9 @@ $(document)
 
     .always(function ajaxAlwaysDoThis(data){
         //always run
-        console.log('always')
+        console.log('always');
 
     })
 
-    return false
+    return false;
 })

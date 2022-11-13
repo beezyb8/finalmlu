@@ -9,7 +9,7 @@
 
         $email = $_POST['email'];
 
-        $findUser = $con->prepare("SELECT user_id from users where email = LOWER(:email) LIMIT 1");
+        $findUser = $con->prepare("SELECT user_id FROM users WHERE email = LOWER(:email) LIMIT 1");
         $findUser->bindParam(':email',$email, PDO::PARAM_STR);
         $findUser->execute();
 
