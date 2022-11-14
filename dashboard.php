@@ -17,6 +17,7 @@
 </head>
 <body>
     <h1>Dashboard</h1>
+    <p>Click here for bank pages<a href="bank_page.php">Bank Page</a></p>
     <p>Hello <?php echo $User->email; ?> you registered at <?php echo $User->reg_date;?></p>
     <a href="logout.php">Click Here to logout</a>
 </body>

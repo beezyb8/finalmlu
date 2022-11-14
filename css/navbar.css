@@ -1,0 +1,97 @@
+body{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+.nav_bar_sticky{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    /* padding: 4rem 5rem; */
+    justify-content: space-around;
+    align-items: center;
+    z-index: 100;
+    width: 100%;
+    transition: 0.6s;
+    background-color: gainsboro;
+}
+
+.nav_cont_list{
+    display: inline;
+    padding: 0px;
+    margin: 10px 5px;
+}
+
+.nav_cont_list>li{
+    display: inline-block;
+    list-style: none;
+    margin-left: auto;
+    margin-right: auto;
+    top: 0px;
+    height: 20px;
+}
+.nav_cont_list>li>a{
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: underline;
+    font-weight: bolder;
+    color: #000;
+    height: 10px;
+    width: auto;
+    display: block;
+    text-align: center;
+    line-height: 10px;
+    padding: 0px 20px;
+}
+
+.nav_cont_list>li>a:hover{
+    color: red;
+    text-shadow: 2px black;
+}
+
+.bank_list_cont{
+    margin-left: 0px;
+    display: flexbox;
+    width: 20%;
+    float: left;
+}
+
+.bank_list{
+    margin-top: 44px;
+    margin-left: 5px;
+    padding: 0px;
+    list-style: none;
+}
+
+.bank_list>li{
+    border: 2px solid black;
+}
+
+.bank_list>li>a{
+    font-size: 10px;
+    text-decoration: none;
+    color: black;
+}
+.bank_list>li>a:hover{
+    font-size: 10px;
+    text-decoration: underline;
+    color: red;
+}
+
+.bank_info_cont{
+    margin-top: 44px;
+    display: flexbox;
+    float: right;
+    width: 75%;
+    border: 5px solid black;
+}
+
+
+/* Change write-up to be pretty */
+/* Enter Reaction */
+.bank_info_cont{
+    color: red;
+}

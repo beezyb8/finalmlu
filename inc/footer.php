@@ -9,3 +9,4 @@
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.12/dist/js/uikit-icons.min.js"></script>
 
 <script src='../finalmlu/assets/js/main.js'></script>
+<script src='../finalmlu/assets/js/bankshift.js'></script>
