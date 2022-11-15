@@ -152,18 +152,21 @@
             <form class = "js-add-contact">
                 <label class="contact-name-header" for="form-stacked-text">Contact Name</label>
                 <div class="contact-name-bin">
-                    <input class="contact-name-input" name="name" type="text" placeholder="John Smith" required="required">
+                    <input class="contact-name-input" id="conname" type="text" placeholder="John Smith" required="required">
                 </div>
-                <label class="contact-pos-header" for="form-stacked-text">Position</label>
-                <div class="contact-pos-bin">
-                    <input class="contact-pos-input" name="position" type="text" placeholder="Analyst">
+                <label class="contact-notes-header" for="form-stacked-text">Notes</label>
+                <div class="contact-notes-bin">
+                    <input class="contact-notes-input" id="notes" type="text" placeholder="1st year analyst...">
                 </div>
-                <button type="submit">Add Contact</button>
-                <button type="submit" class="closemodal">Close Window</button>
+                <div class="submit-bin">
+                    <button class="submit-button">Add Contact</button>
+                </div>
             </form>
+            <button type="" class="closemodal">Close Window</button>
         </div>
     </div>
     <?php require_once "inc/footer.php"; ?>
+    <script src='../finalmlu/assets/js/network.js'></script>
 </body>
 </html>
 

@@ -1,19 +1,24 @@
 <?php 
     define('__CONFIG__', true);
     require_once "../inc/config.php";
+    header('Content-Type: application/json');
 
 
-    if($_SERVER['REQUEST_METHOD']=='POST'){
-        // header('Content-Type: application/json');
+    if($_SERVER['REQUEST_METHOD'] == 'GET') {
         $return = [];
 
-        $contact_name = $_POST['name'];
-        $notes = $_POST['notes'];
+        $usercontactid = (int)$_SESSION['user_id'];
+        $contactname = (string)$_GET['contactname'];
+        $notes = (string)$_GET['notes'];
 
-        $addcontact = $con->prepare("INSERT INTO contacts(user_id, contact_name, notes) VALUES(:contact_name, :password)");
-        $addcontact -> bindParam(':email', $email, PDO::PARAM_STR);
-        $addcontact -> bindParam(':password', $password, PDO::PARAM_STR);
+
+        $addsql = "INSERT INTO contacts(user_contactid, contact_name, notes) VALUES(:user_contactid, :contact_name, :notes)";
+        $addcontact = $con->prepare($addsql);
+        $addcontact -> bindParam(':user_contactid', $usercontactid, PDO::PARAM_INT);
+        $addcontact -> bindParam(':contact_name', $contactname, PDO::PARAM_STR);
+        $addcontact -> bindParam(':notes', $notes, PDO::PARAM_STR);
         $addcontact->execute();
     }
 
-////UNDERSTAND????/
+    echo json_encode($return, JSON_PRETTY_PRINT); exit;
+?>
