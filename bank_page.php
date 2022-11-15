@@ -22,7 +22,7 @@
                 <a href="bank_page.php">Bank Page</a>
                 </li>
             <li class="navbar_cont">
-                <a href="TBD">Expanded Netowrking Table</a>
+                <a href="contact.php">Network Table Manager</a>
             </li>
             <li class="navbar_cont">
                 <a href="TBD">Notifications</a>
@@ -35,119 +35,136 @@
     <div class="bank_list_cont">
         <ul class="bank_list">
             <li class="rothschild">
-                <a href="">Rothshcild</a>
+                <p class="gang">Rothshcild</p>
             </li>
             <li class="moelis">
-                <a href="">Moelis</a>
+                <p>Moelis</p>
             </li>
             <li class="allen">
-                <a href="">Allen & Co</a>
+                <p>Allen & Co</p>
             </li>
             <li class="bofa">
-                <a href="">Bank of America</a>
+                <p>Bank of America</p>
             </li>
             <li class="barclays">
-                <a href="">Barclays</a>
+                <p>Barclays</p>
             </li>
             <li class="bmo">
-                <a href="">BMO</a>
+                <p>BMO</p>
             </li>
             <li class="centerview">
-                <a href="">Centerview</a>
+                <p>Centerview</p>
             </li>
             <li class="citi">
-                <a href="">Citi Bank</a>
+                <p>Citi Bank</p>
             </li>
             <li class="credit">
-                <a href="">Credit Suisse</a>
+                <p>Credit Suisse</p>
             </li>
             <li class="cowen">
-                <a href="">Cowen</a>
+                <p>Cowen</p>
             </li>
             <li class="deutsche">
-                <a href="">Deutsche Bank</a>
+                <p>Deutsche Bank</p>
             </li>
             <li class="deutsche">
-                <a href="">Evercore</a>
+                <p>Evercore</p>
             </li>
             <li class="financo">
-                <a href="">Financo</a>
+                <p>Financo</p>
             </li>
             <li class="goldman">
-                <a href="">Goldman Sachs</a>
+                <p>Goldman Sachs</p>
             </li>
             <li class="greenhill">
-                <a href="">Greenhill</a>
+                <p>Greenhill</p>
             </li>
             <li class="guggenheim">
-                <a href="">Guggenheim</a>
+                <p>Guggenheim</p>
             </li>
             <li class="houlihan">
-                <a href="">Houlihan Lokey</a>
+                <p>Houlihan Lokey</p>
             </li>
             <li class="jefferies">
-                <a href="">Jefferies</a>
+                <p>Jefferies</p>
             </li>
             <li  class="jp">
-                <a href="">JP Morgan</a>
+                <p>JP Morgan</p>
             </li>
             <li class="lazard">
-                <a href="">Lazard</a>
+                <p>Lazard</p>
             </li>
             <li class="lion">
-                <a href="">LionTree</a>
+                <p>LionTree</p>
             </li>
             <li class="macquarie">
-                <a href="">Macquarie</a>
+                <p>Macquarie</p>
             </li>
             <li class="mizuho">
-                <a href="">Mizuho</a>
+                <p>Mizuho</p>
             </li>
             <li class="morgan">
-                <a href="">Morgan Stanley</a>
+                <p>Morgan Stanley</p>
             </li>
             <li class="mklein">
-                <a href="">M. Klein & Co</a>
+                <p>M. Klein & Co</p>
             </li>
             <li class="perella">
-                <a href="">Perella Weinberg</a>
+                <p>Perella Weinberg</p>
             </li>
             <li class="piper">
-                <a href="">Piper Sandler</a>
+                <p>Piper Sandler</p>
             </li>
             <li class="pjt">
-                <a href="">PJT</a>
+                <p>PJT</p>
             </li>
             <li class="qatalyst">
-                <a href="">Qatalyst Partners</a>
+                <p>Qatalyst Partners</p>
             </li>
             <li class="raine">
-                <a href="">Raine</a>
+                <p>Raine</p>
             </li>
             <li class="rbc">
-                <a href="">RBC</a>
+                <p>RBC</p>
             </li>
             <li class="solomon">
-                <a href="">Solomon Partners</a>
+                <p>Solomon Partners</p>
             </li>
             <li class="ubs">
-                <a href="">UBS</a>
+                <p>UBS</p>
             </li>
             <li class="william">
-                <a href="">William Blair</a>
+                <p>William Blair</p>
             </li>
         </ul>
     </div>
     <div class="bank_info_cont">
-        <p class="bank_name" id="bankname">BANK NAME</p>
-        <h6>BANK DESCRIPTION</h6>
+        <h3 class="bank_name" id="bankname">BANK NAME</h3>
+        <h6 id="item_title">BANK DESCRIPTION</h6>
         <p id="writeup">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis excepturi mollitia eos fugit ut vero aliquid soluta sed, alias iste ipsam non labore necessitatibus voluptatum, saepe, ex amet in! Velit.</p>
-        <h6>BANK INTERVIEW PROCESS</h6>
+        <h6 id="item_title">BANK INTERVIEW PROCESS</h6>
         <p id="interviewsum">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis excepturi mollitia eos fugit ut vero aliquid soluta sed, alias iste ipsam non labore necessitatibus voluptatum, saepe, ex amet in! Velit.</p>
         <h6 id="emailformat">gang@gmail.com</h6>
         <h6>Networking Table</h6>
+        <button class="newcontact">Add new contact</button>
+        <br>
+        <div class="contactmodal">
+            <form class = "js-add-contact">
+                <label class="contact-name-header" for="form-stacked-text">Contact Name</label>
+                <div class="contact-name-bin">
+                    <input class="contact-name-input" name="name" type="text" placeholder="John Smith" required="required">
+                </div>
+                <label class="contact-pos-header" for="form-stacked-text">Position</label>
+                <div class="contact-pos-bin">
+                    <input class="contact-pos-input" name="position" type="text" placeholder="Analyst">
+                </div>
+                <button type="submit">Add Contact</button>
+                <button type="submit" class="closemodal">Close Window</button>
+            </form>
+        </div>
     </div>
-
     <?php require_once "inc/footer.php"; ?>
 </body>
 </html>
+
+<!-- DELETED MODAL TO ADD CONTACT BY BANK -->

@@ -18,6 +18,7 @@ body{
     width: 100%;
     transition: 0.6s;
     background-color: gainsboro;
+    border-bottom: 2px solid black;
 }
 
 .nav_cont_list{
@@ -70,28 +71,57 @@ body{
     border: 2px solid black;
 }
 
-.bank_list>li>a{
+.bank_list>li>p{
     font-size: 10px;
     text-decoration: none;
     color: black;
+    padding: 0px 1px;
 }
-.bank_list>li>a:hover{
+
+.bank_list>li>p:hover{
     font-size: 10px;
     text-decoration: underline;
     color: red;
+    cursor: pointer;
 }
 
 .bank_info_cont{
     margin-top: 44px;
     display: flexbox;
     float: right;
-    width: 75%;
-    border: 5px solid black;
+    width: 77%;
+    border-right: 5px solid black;
+    border-bottom: 5px solid black;
+    border-left: 5px solid black;
 }
 
 
 /* Change write-up to be pretty */
 /* Enter Reaction */
 .bank_info_cont{
-    color: red;
+    padding: 5px;
+    color: black;
+}
+
+.bank_name{
+    text-decoration: underline;
+    margin: 10px 0px;
+}
+
+#item_title{
+    margin: 10px 0px;
+    text-decoration: underline;
+}
+
+#writeup,
+#interviewsum{
+    font-size: 12px;
+}
+
+.contactmodal{
+    border: 1px solid black;
+    background-color: white;
+    padding: 10px;
+    margin-top: 5px;
+    display: none;
 }
