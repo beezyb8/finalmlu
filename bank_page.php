@@ -146,10 +146,11 @@
         <p id="interviewsum">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis excepturi mollitia eos fugit ut vero aliquid soluta sed, alias iste ipsam non labore necessitatibus voluptatum, saepe, ex amet in! Velit.</p>
         <h6 id="emailformat">gang@gmail.com</h6>
         <h6>Networking Table</h6>
+        <div class="nocontacts">No Contacts!</div>
         <table class="nworktable">
             <tr>
-                <th>Contact Name</th>
-                <th>Notes</th>
+                <th class="contacttitle">Contact Name</th>
+                <th class="notestitle">Notes</th>
             </tr>
             <tbody class="table_body">
             </tbody>

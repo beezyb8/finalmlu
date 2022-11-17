@@ -131,3 +131,11 @@ table,th,td{
     border-collapse: collapse;
     width: 100%;
 }
+
+.nocontacts{
+    display: inline-block;
+}
+
+.contacttitle{
+    width: 20%;
+}
