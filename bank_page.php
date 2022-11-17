@@ -146,10 +146,15 @@
         <p id="interviewsum">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis excepturi mollitia eos fugit ut vero aliquid soluta sed, alias iste ipsam non labore necessitatibus voluptatum, saepe, ex amet in! Velit.</p>
         <h6 id="emailformat">gang@gmail.com</h6>
         <h6>Networking Table</h6>
+        <table class="nworktable">
+            <tr>
+                <th>Contact Name</th>
+                <th>Notes</th>
+            </tr>
+            <tbody class="table_body">
+            </tbody>
+        </table>
         <button class="newcontact">Add new contact</button>
-        <div class="network_div">
-            
-        </div>
         <br>
         <div class="contactmodal">
             <form class = "js-add-contact">

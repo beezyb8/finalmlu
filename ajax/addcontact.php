@@ -21,21 +21,13 @@
         $addcontact -> bindParam(':bank', $bank, PDO::PARAM_STR);
         $addcontact->execute();
 
+        // AND bank = $bank
         $sqlfilter = "SELECT * FROM contacts WHERE user_contactid = :user_contactid AND bank = :bank";
         $networkdata = $con->prepare($sqlfilter);
-        $networkdata -> bindParam(':user_contactid', $usercontactid, PDO::PARAM_INT);
-        $networkdata -> bindParam(':bank', $bank, PDO::PARAM_STR);
+        $networkdata->bindParam('user_contactid', $usercontactid);
+        $networkdata->bindParam('bank', $bank);
         $networkdata->execute();
-
-        // $return['contacts'] = $new;
-        // echo json_encode($return, JSON_PRETTY_PRINT); exit;
-
-        if ($networkdata->rowCount()>0) {
-            $return['contacts'] = "yoooo";
-            echo json_encode($return, JSON_PRETTY_PRINT); exit;
-        } else{
-            $return['contacts'] = "yo";
-            echo json_encode($return, JSON_PRETTY_PRINT); exit;
-        }
+        $return['contacts'] = $networkdata->fetchAll(PDO::FETCH_ASSOC);
+        echo json_encode($return, JSON_PRETTY_PRINT); exit;
     }
 ?>
