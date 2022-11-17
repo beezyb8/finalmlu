@@ -34,106 +34,106 @@
     </nav>
     <div class="bank_list_cont">
         <ul class="bank_list">
-            <li class="rothschild">
+            <li class="rothschild switch">
                 <p class="gang">Rothshcild</p>
             </li>
-            <li class="moelis">
+            <li class="moelis switch">
                 <p>Moelis</p>
             </li>
-            <li class="allen">
+            <li class="allen switch">
                 <p>Allen & Co</p>
             </li>
-            <li class="bofa">
+            <li class="bofa switch">
                 <p>Bank of America</p>
             </li>
-            <li class="barclays">
+            <li class="barclays switch">
                 <p>Barclays</p>
             </li>
-            <li class="bmo">
+            <li class="bmo switch">
                 <p>BMO</p>
             </li>
-            <li class="centerview">
+            <li class="centerview switch">
                 <p>Centerview</p>
             </li>
-            <li class="citi">
+            <li class="citi switch">
                 <p>Citi Bank</p>
             </li>
-            <li class="credit">
+            <li class="credit switch">
                 <p>Credit Suisse</p>
             </li>
-            <li class="cowen">
+            <li class="cowen switch">
                 <p>Cowen</p>
             </li>
-            <li class="deutsche">
+            <li class="deutsche switch">
                 <p>Deutsche Bank</p>
             </li>
-            <li class="deutsche">
+            <li class="deutsche switch">
                 <p>Evercore</p>
             </li>
-            <li class="financo">
+            <li class="financo switch">
                 <p>Financo</p>
             </li>
-            <li class="goldman">
+            <li class="goldman switch">
                 <p>Goldman Sachs</p>
             </li>
-            <li class="greenhill">
+            <li class="greenhill switch">
                 <p>Greenhill</p>
             </li>
-            <li class="guggenheim">
+            <li class="guggenheim switch">
                 <p>Guggenheim</p>
             </li>
-            <li class="houlihan">
+            <li class="houlihan switch">
                 <p>Houlihan Lokey</p>
             </li>
-            <li class="jefferies">
+            <li class="jefferies switch">
                 <p>Jefferies</p>
             </li>
-            <li  class="jp">
+            <li class="jp switch">
                 <p>JP Morgan</p>
             </li>
-            <li class="lazard">
+            <li class="lazard switch">
                 <p>Lazard</p>
             </li>
-            <li class="lion">
+            <li class="lion switch">
                 <p>LionTree</p>
             </li>
-            <li class="macquarie">
+            <li class="macquarie switch">
                 <p>Macquarie</p>
             </li>
-            <li class="mizuho">
+            <li class="mizuho switch">
                 <p>Mizuho</p>
             </li>
-            <li class="morgan">
+            <li class="morgan switch">
                 <p>Morgan Stanley</p>
             </li>
-            <li class="mklein">
+            <li class="mklein switch">
                 <p>M. Klein & Co</p>
             </li>
-            <li class="perella">
+            <li class="perella switch">
                 <p>Perella Weinberg</p>
             </li>
-            <li class="piper">
+            <li class="piper switch">
                 <p>Piper Sandler</p>
             </li>
-            <li class="pjt">
+            <li class="pjt switch">
                 <p>PJT</p>
             </li>
-            <li class="qatalyst">
+            <li class="qatalyst switch">
                 <p>Qatalyst Partners</p>
             </li>
-            <li class="raine">
+            <li class="raine switch">
                 <p>Raine</p>
             </li>
-            <li class="rbc">
+            <li class="rbc switch">
                 <p>RBC</p>
             </li>
-            <li class="solomon">
+            <li class="solomon switch">
                 <p>Solomon Partners</p>
             </li>
-            <li class="ubs">
+            <li class="ubs switch">
                 <p>UBS</p>
             </li>
-            <li class="william">
+            <li class="william switch">
                 <p>William Blair</p>
             </li>
         </ul>
@@ -147,6 +147,9 @@
         <h6 id="emailformat">gang@gmail.com</h6>
         <h6>Networking Table</h6>
         <button class="newcontact">Add new contact</button>
+        <div class="network_div">
+            
+        </div>
         <br>
         <div class="contactmodal">
             <form class = "js-add-contact">

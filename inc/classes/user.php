@@ -22,7 +22,6 @@ class User {
         $user->execute();
 
         if($user->rowCount() == 1){
-            echo "Hello World";
             $user = $user->fetch(PDO::FETCH_OBJ);
 
             $this->email        =(string)$user->email;
