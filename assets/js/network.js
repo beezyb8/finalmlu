@@ -32,11 +32,48 @@ $(document)
         //ADD HTML AND SHOW CONTACT
         var event_data = '';
         $.each(data.contacts, function(index, value){
+            if(value.coldemail == 1){
+                coldchecker = 'checked'
+            } else {
+                coldchecker = ''
+            }
+            if(value.callhad == 1){
+                callchecker = 'checked'
+            }  else {
+                callchecker = ''
+            }
+            if(value.callsched == 1){
+                callsched = 'checked'
+            } else {
+                callsched = ''
+            }
+            if(value.thankyou == 1){
+                thankyouchecker = 'checked'
+            }  else {
+                thankyouchecker = ''
+            }
             /*console.log(value);*/
-            event_data += '<tr>';
+            event_data += "<tr class='"+value.contact_id+"'>";
             event_data += "<td class='contacttitle'>"+value.contact_name+'</td>';
             event_data += "<td class='notes'>"+value.notes+'</td>';
+            event_data += "<td class='coldemail'>"+
+            "<form class='coldcheck_checks "+value.contact_id+"'>"+
+            "<input type='checkbox' id='cold' name='cold' class = '"+value.contact_id+"'" + coldchecker + ">"
+            +"</form></td>"
+            event_data += "<td class='callsched'>"+
+            "<form class='callsched_checks "+value.contact_id+"'>"+
+            "<input type='checkbox' id='callsched' name='callsched' class = '"+value.contact_id+"'" + callsched + ">"
+            +"</form></td>";
+            event_data += "<td class='call'>"+
+            "<form class='callhad_checks "+value.contact_id+"'>"+
+            "<input type='checkbox' id='call' name='call' class = '"+value.contact_id+"'" +callchecker + ">"
+            +"</form></td>";
+            event_data += "<td class='thankyou'>"+
+            "<form class='ty_checks "+value.contact_id+"'>"+
+            "<input type='checkbox' id='thankyou' name='thankyou' class = '"+value.contact_id+"'" + + thankyouchecker + ">"
+            +"</form></td>";
             event_data += '</tr>';
+        
         });
         if(event_data.length > 0){
             $(".table_body").html(event_data);
@@ -92,9 +129,34 @@ $(document)
         var event_data = '';
         $.each(data.contacts, function(index, value){
             /*console.log(value);*/
-            event_data += '<tr>';
+            if(value.coldemail == 1){
+                coldchecker = 'checked'
+            } else {
+                coldchecker = ''
+            }
+            if(value.callsched == 1){
+                callsched = 'checked'
+            } else {
+                callsched = ''
+            }
+            if(value.callhad == 1){
+                callchecker = 'checked'
+            }  else {
+                callchecker = ''
+            }
+            if(value.thankyou == 1){
+                thankyouchecker = 'checked'
+            }  else {
+                thankyouchecker = ''
+            }
+            /*console.log(value);*/
+            event_data += "<tr class='"+value.contact_id+"'>";
             event_data += "<td class='contacttitle'>"+value.contact_name+'</td>';
             event_data += "<td class='notes'>"+value.notes+'</td>';
+            event_data += "<td class='coldemail'>"+"<input type='checkbox' id='cold' name='cold' value = '"+value.contact_id+"'" + coldchecker + ">"+'</td>';
+            event_data += "<td class='callsched'>"+"<input type='checkbox' id='callsched' name='callsched' value = '"+value.contact_id+"'" + callsched + ">"+'</td>';
+            event_data += "<td class='call'>"+"<input type='checkbox' id='call' name='call' value = '"+value.contact_id+"'" +callchecker + ">"+'</td>';
+            event_data += "<td class='thankyou'>"+"<input type='checkbox' id='thankyou' name='thankyou' value = '"+value.contact_id+"'" + + thankyouchecker + ">"+'</td>';
             event_data += '</tr>';
         });
         $(".table_body").html(event_data);

@@ -151,6 +151,10 @@
             <tr>
                 <th class="contacttitle">Contact Name</th>
                 <th class="notestitle">Notes</th>
+                <th class="notestitle">Cold Email</th>
+                <th class="notestitle">Call Scheduled</th>
+                <th class="notestitle">Call Had</th>
+                <th class="notestitle">Thank You Email</th>
             </tr>
             <tbody class="table_body">
             </tbody>
