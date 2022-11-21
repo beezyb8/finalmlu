@@ -12,3 +12,4 @@
 <script src='../finalmlu/assets/js/bankshift.js'></script>
 <script src='../finalmlu/assets/js/network.js'></script>
 <script src='../finalmlu/assets/js/nwcheckers.js'></script>
+<script src='../finalmlu/assets/js/textchange.js'></script>

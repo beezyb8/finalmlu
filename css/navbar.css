@@ -139,12 +139,6 @@ table,th,td{
 .contacttitle{
     width: 20%;
 }
-/* 
-.confirmchecks{
-    width: 10px;
-
-} */
-
 
 .colddone{
     background-color: orange;
@@ -161,4 +155,13 @@ table,th,td{
 
 .thankyoudone{
     background-color: green;
+}
+
+/* #notetextarea{
+    background-color: gainsboro;
+    width: 90%;
+} */
+
+#textchangebtn{
+    display: none;
 }

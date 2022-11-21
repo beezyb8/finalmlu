@@ -54,9 +54,11 @@ $(document)
             }
             /*console.log(value);*/
             var marker = "cd"+value.contact_id.toString();
+            var txmarker = value.contact_id.toString();
+            var btnmarker = "bt"+value.contact_id.toString();
             event_data += "<tr class='"+marker+"'>";
             event_data += "<td class='contacttitle'>"+value.contact_name+'</td>';
-            event_data += "<td class='notes'><textarea>"+value.notes+'</textarea></td>';
+            event_data += "<td class='notes'><textarea id='notetextarea' class='"+txmarker+"'>"+value.notes+"</textarea><br><button type='submit' id='textchangebtn' class='" +btnmarker+"'>confirm</button></td>";
             event_data += "<td class='coldemail'>"+
             "<form class='coldcheck_checks "+value.contact_id+"'>"+
             "<input type='checkbox' id='cold' name='cold' class = '"+value.contact_id+"'" + coldchecker + ">"
@@ -177,9 +179,11 @@ $(document)
             }
             /*console.log(value);*/
             var marker = "cd"+value.contact_id.toString();
+            var txmarker = value.contact_id.toString();
+            var btnmarker = "bt"+value.contact_id.toString();
             event_data += "<tr class='"+marker+"'>";
             event_data += "<td class='contacttitle'>"+value.contact_name+'</td>';
-            event_data += "<td class='notes'><textarea>"+value.notes+'</textarea></td>';
+            event_data += "<td class='notes'><textarea id='notetextarea' class='"+txmarker+"'>"+value.notes+"</textarea><br><button type='submit' id='textchangebtn' class='" +btnmarker+"'>confirm</button></td>";
             event_data += "<td class='coldemail'>"+
             "<form class='coldcheck_checks "+value.contact_id+"'>"+
             "<input type='checkbox' id='cold' name='cold' class = '"+value.contact_id+"'" + coldchecker + ">"
