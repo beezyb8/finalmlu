@@ -144,3 +144,21 @@ table,th,td{
     width: 10px;
 
 } */
+
+
+.colddone{
+    background-color: orange;
+}
+
+.callscheddone{
+    background-color: yellow;
+}
+
+
+.callhaddone{
+    background-color: red;
+}
+
+.thankyoudone{
+    background-color: green;
+}

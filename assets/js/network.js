@@ -37,15 +37,15 @@ $(document)
             } else {
                 coldchecker = ''
             }
-            if(value.callhad == 1){
-                callchecker = 'checked'
-            }  else {
-                callchecker = ''
-            }
             if(value.callsched == 1){
                 callsched = 'checked'
             } else {
                 callsched = ''
+            }
+            if(value.callhad == 1){
+                callchecker = 'checked'
+            }  else {
+                callchecker = ''
             }
             if(value.thankyou == 1){
                 thankyouchecker = 'checked'
@@ -53,9 +53,10 @@ $(document)
                 thankyouchecker = ''
             }
             /*console.log(value);*/
-            event_data += "<tr class='"+value.contact_id+"'>";
+            var marker = "cd"+value.contact_id.toString();
+            event_data += "<tr class='"+marker+"'>";
             event_data += "<td class='contacttitle'>"+value.contact_name+'</td>';
-            event_data += "<td class='notes'>"+value.notes+'</td>';
+            event_data += "<td class='notes'><textarea>"+value.notes+'</textarea></td>';
             event_data += "<td class='coldemail'>"+
             "<form class='coldcheck_checks "+value.contact_id+"'>"+
             "<input type='checkbox' id='cold' name='cold' class = '"+value.contact_id+"'" + coldchecker + ">"
@@ -70,7 +71,7 @@ $(document)
             +"</form></td>";
             event_data += "<td class='thankyou'>"+
             "<form class='ty_checks "+value.contact_id+"'>"+
-            "<input type='checkbox' id='thankyou' name='thankyou' class = '"+value.contact_id+"'" + + thankyouchecker + ">"
+            "<input type='checkbox' id='thankyou' name='thankyou' class = '"+value.contact_id+"'" + thankyouchecker + ">"
             +"</form></td>";
             event_data += '</tr>';
         
@@ -82,7 +83,32 @@ $(document)
             nocontacts.style.display = "inline-block";
             $(".table_body").html(event_data);
         }
-        console.log("donedone")
+
+        $.each(data.contacts, function(index, value){
+            // Change color based on checks
+            let marker = "cd"+value.contact_id.toString();
+            let thisrow = document.querySelector("."+marker);
+            if(value.coldemail == 1){
+                thisrow.classList.add("colddone")
+            } else{
+                thisrow.classList.remove("colddone")
+            }
+            if(value.callsched == 1){
+                thisrow.classList.add("callscheddone")
+            } else{
+                thisrow.classList.remove("callscheddone")
+            }
+            if(value.callhad == 1){
+                thisrow.classList.add("callhaddone")
+            } else{
+                thisrow.classList.remove("callhaddone")
+            }
+            if(value.thankyou == 1){
+                thisrow.classList.add("thankyoudone")
+            } else{
+                thisrow.classList.remove("thankyoudone")
+            }
+        })
     })
 
     .fail(function ajaxFailed(data) {
@@ -150,16 +176,54 @@ $(document)
                 thankyouchecker = ''
             }
             /*console.log(value);*/
-            event_data += "<tr class='"+value.contact_id+"'>";
+            var marker = "cd"+value.contact_id.toString();
+            event_data += "<tr class='"+marker+"'>";
             event_data += "<td class='contacttitle'>"+value.contact_name+'</td>';
-            event_data += "<td class='notes'>"+value.notes+'</td>';
-            event_data += "<td class='coldemail'>"+"<input type='checkbox' id='cold' name='cold' value = '"+value.contact_id+"'" + coldchecker + ">"+'</td>';
-            event_data += "<td class='callsched'>"+"<input type='checkbox' id='callsched' name='callsched' value = '"+value.contact_id+"'" + callsched + ">"+'</td>';
-            event_data += "<td class='call'>"+"<input type='checkbox' id='call' name='call' value = '"+value.contact_id+"'" +callchecker + ">"+'</td>';
-            event_data += "<td class='thankyou'>"+"<input type='checkbox' id='thankyou' name='thankyou' value = '"+value.contact_id+"'" + + thankyouchecker + ">"+'</td>';
+            event_data += "<td class='notes'><textarea>"+value.notes+'</textarea></td>';
+            event_data += "<td class='coldemail'>"+
+            "<form class='coldcheck_checks "+value.contact_id+"'>"+
+            "<input type='checkbox' id='cold' name='cold' class = '"+value.contact_id+"'" + coldchecker + ">"
+            +"</form></td>"
+            event_data += "<td class='callsched'>"+
+            "<form class='callsched_checks "+value.contact_id+"'>"+
+            "<input type='checkbox' id='callsched' name='callsched' class = '"+value.contact_id+"'" + callsched + ">"
+            +"</form></td>";
+            event_data += "<td class='call'>"+
+            "<form class='callhad_checks "+value.contact_id+"'>"+
+            "<input type='checkbox' id='call' name='call' class = '"+value.contact_id+"'" +callchecker + ">"
+            +"</form></td>";
+            event_data += "<td class='thankyou'>"+
+            "<form class='ty_checks "+value.contact_id+"'>"+
+            "<input type='checkbox' id='thankyou' name='thankyou' class = '"+value.contact_id+"'" + thankyouchecker + ">"
+            +"</form></td>";
             event_data += '</tr>';
         });
         $(".table_body").html(event_data);
+        $.each(data.contacts, function(index, value){
+            // Change color based on checks
+            let marker = "cd"+value.contact_id.toString();
+            let thisrow = document.querySelector("."+marker);
+            if(value.coldemail == 1){
+                thisrow.classList.add("colddone")
+            } else{
+                thisrow.classList.remove("colddone")
+            }
+            if(value.callsched == 1){
+                thisrow.classList.add("callscheddone")
+            } else{
+                thisrow.classList.remove("callscheddone")
+            }
+            if(value.callhad == 1){
+                thisrow.classList.add("callhaddone")
+            } else{
+                thisrow.classList.remove("callhaddone")
+            }
+            if(value.thankyou == 1){
+                thisrow.classList.add("thankyoudone")
+            } else{
+                thisrow.classList.remove("thankyoudone")
+            }
+        })
     })
 
     .fail(function ajaxFailed(data) {
