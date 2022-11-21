@@ -12,6 +12,10 @@ table,th,td{
     width: 100%;
 }
 
+.checkboxhead{
+    margin: 16px 5px;
+}
+
 .nocontacts{
     display: inline-block;
 }
