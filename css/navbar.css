@@ -118,7 +118,7 @@ body{
     font-size: 12px;
 }
 
-.contactmodal{
+/* .contactmodal{
     border: 1px solid black;
     background-color: white;
     padding: 10px;
@@ -157,11 +157,11 @@ table,th,td{
     background-color: green;
 }
 
-/* #notetextarea{
+#notetextarea{
     background-color: gainsboro;
     width: 90%;
-} */
+}
 
 #textchangebtn{
     display: none;
-}
+} */
