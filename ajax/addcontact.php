@@ -9,7 +9,7 @@
 
         $usercontactid = (int)$_SESSION['user_id'];
         $contactname = (string)$_POST['contactname'];
-        $notes = (string)$_POST['notes'];
+        $notes = '';
         $bank = (string)$_POST['bank'];
 
 

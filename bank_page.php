@@ -18,6 +18,9 @@
 </head>
 <body>
     <nav class="nav_bar_sticky">
+        <div class="logocont">
+            <img src="../finalmlu/images/logos/mluhzltext.jpg" alt="MLU logo" class="logo">
+        </div>
         <ul class="nav_cont_list">
             <li class="navbar_cont">
                 <a href="bank_page.php">Bank Page</a>
@@ -36,7 +39,7 @@
     <div class="bank_list_cont">
         <ul class="bank_list">
             <li class="rothschild switch">
-                <p class="gang">Rothshcild</p>
+                <p>Rothshchild</p>
             </li>
             <li class="moelis switch">
                 <p>Moelis</p>
@@ -141,21 +144,20 @@
     </div>
     <div class="bank_info_cont">
         <h3 class="bank_name" id="bankname">BANK NAME</h3>
-        <h6 id="item_title">BANK DESCRIPTION</h6>
+        <h6 id="item_title" class="toptitle">Bank Description</h6>
         <p id="writeup">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis excepturi mollitia eos fugit ut vero aliquid soluta sed, alias iste ipsam non labore necessitatibus voluptatum, saepe, ex amet in! Velit.</p>
-        <h6 id="item_title">BANK INTERVIEW PROCESS</h6>
+        <h6 id="item_title" class="bottomtitle">Bank Interview Process</h6>
         <p id="interviewsum">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis excepturi mollitia eos fugit ut vero aliquid soluta sed, alias iste ipsam non labore necessitatibus voluptatum, saepe, ex amet in! Velit.</p>
         <h6 id="emailformat">gang@gmail.com</h6>
-        <h6>Networking Table</h6>
         <div class="nocontacts">No Contacts!</div>
         <table class="nworktable">
             <tr>
                 <th class="contacttitle">Contact Name</th>
                 <th class="notestitle">Notes</th>
-                <th class="notestitle">Cold Email</th>
-                <th class="notestitle">Call Scheduled</th>
-                <th class="notestitle">Call Had</th>
-                <th class="notestitle">Thank You Email</th>
+                <th class="notestitle"><p class="checkboxhead">Cold Email</p></th>
+                <th class="notestitle"><p class="checkboxhead">Call Set</p></th>
+                <th class="notestitle"><p class="checkboxhead">Call Had</p></th>
+                <th class="notestitle"><p class="checkboxhead">Thank You</p></th>
             </tr>
             <tbody class="table_body">
             </tbody>
@@ -167,10 +169,6 @@
                 <label class="contact-name-header" for="form-stacked-text">Contact Name</label>
                 <div class="contact-name-bin">
                     <input class="contact-name-input" id="conname" type="text" placeholder="John Smith" required="required">
-                </div>
-                <label class="contact-notes-header" for="form-stacked-text">Notes</label>
-                <div class="contact-notes-bin">
-                    <input class="contact-notes-input" id="notes" type="text" placeholder="1st year analyst...">
                 </div>
                 <div class="submit-bin">
                     <button class="submit-button">Add Contact</button>

@@ -7,7 +7,6 @@ $(document)
     var btnidentify = "bt"+btnidentify.toString();
     var thisbutton = document.querySelector("."+btnidentify);
     thisbutton.style.display = "inline-block";
-    console.log("yoo");
 thisbutton.onclick = () =>{
     var $newnotes = thistextbox.val();
 
@@ -33,4 +32,3 @@ thisbutton.onclick = () =>{
     })
     }
 })
-
