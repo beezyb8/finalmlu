@@ -1,12 +1,14 @@
 const bankname = document.querySelector('#bankname')
 const writeup = document.querySelector('#writeup')
 const interviewsum = document.querySelector('#interviewsum')
+const banklogo = document.querySelector(".banklogo")
 
 const rothschild_button = document.querySelector('.rothschild')
 rothschild_button.onclick = () =>{
     bankname.innerHTML = "Rothschild"
     writeup.innerHTML = "Rothschild, first founded in the early 1800’s, is one of Europe’s most well known brands and a leader in the industry. In the US, Rothschild operates as a boutique bank, complimenting their European division but also sourcing their own deal flow. As a boutique Rothschild’s typical recruiting class is anywhere from 15-25 analysts, and does not necessarily target any schools in particular. Rothschild takes pride in their culture as a historically “family-owned” enterprise. This allows them to not manage quarter to quarter making them resistant to recession. In terms of deal flow, Rothshchild covers all categories of banking, and its restructuring division is particularly strong. Additionally, Rothschild offers a rotational summer program allowing analysts to sit on three desks throughout their summer."
     interviewsum.innerHTML = "As mentioned above, Rothschild does not necessarily target Michigan or place a heavy emphasis on networking calls. Instead they rely on technical interviews followed by interviews with management to determine a candidate's standing. The technical portion of Rothschild’s interview is focused on understanding rather than memorization."
+    banklogo.src = "../finalmlu/images/banklogos/rothschild.jpg"
 }
 
 const moelis_button = document.querySelector('.moelis')
@@ -37,75 +39,3 @@ barclays_button.onclick = () =>{
     writeup.innerHTML = ""
     interviewsum.innerHTML = ""
 }
-
-// const moelis_button = document.querySelector('.moelis')
-// moelis_button.onclick = () =>{
-//     bankname.innerHTML = "Moelis"
-//     writeup.innerHTML = "what is happening"
-//     interviewsum.innerHTML = "gang"
-// }
-// const moelis_button = document.querySelector('.moelis')
-// moelis_button.onclick = () =>{
-//     bankname.innerHTML = "Moelis"
-//     writeup.innerHTML = "what is happening"
-//     interviewsum.innerHTML = "gang"
-// }
-// const moelis_button = document.querySelector('.moelis')
-// moelis_button.onclick = () =>{
-//     bankname.innerHTML = "Moelis"
-//     writeup.innerHTML = "what is happening"
-//     interviewsum.innerHTML = "gang"
-// }
-
-// const rothschild_button = document.querySelector('.rothschild')
-// rothschild_button.onclick = () =>{
-//     bankname.innerHTML = "Rothschild"
-//     writeup.innerHTML = "what is happening"
-//     interviewsum.innerHTML = "gang"
-// }
-
-// const rothschild_button = document.querySelector('.rothschild')
-// rothschild_button.onclick = () =>{
-//     bankname.innerHTML = "Rothschild"
-//     writeup.innerHTML = "what is happening"
-//     interviewsum.innerHTML = "gang"
-// }
-// const rothschild_button = document.querySelector('.rothschild')
-// rothschild_button.onclick = () =>{
-//     bankname.innerHTML = "Rothschild"
-//     writeup.innerHTML = "what is happening"
-//     interviewsum.innerHTML = "gang"
-// }
-
-// const rothschild_button = document.querySelector('.rothschild')
-// rothschild_button.onclick = () =>{
-//     bankname.innerHTML = "Rothschild"
-//     writeup.innerHTML = "what is happening"
-//     interviewsum.innerHTML = "gang"
-// }
-// const rothschild_button = document.querySelector('.rothschild')
-// rothschild_button.onclick = () =>{
-//     bankname.innerHTML = "Rothschild"
-//     writeup.innerHTML = "what is happening"
-//     interviewsum.innerHTML = "gang"
-// }
-
-// const rothschild_button = document.querySelector('.rothschild')
-// rothschild_button.onclick = () =>{
-//     bankname.innerHTML = "Rothschild"
-//     writeup.innerHTML = "what is happening"
-//     interviewsum.innerHTML = "gang"
-// }
-// const rothschild_button = document.querySelector('.rothschild')
-// rothschild_button.onclick = () =>{
-//     bankname.innerHTML = "Rothschild"
-//     writeup.innerHTML = "what is happening"
-//     interviewsum.innerHTML = "gang"
-// }
-
-// const rothschild_button = document.querySelector('.rothschild')
-// rothschild_button.onclick = () =>{
-//     bankname.innerHTML = "Rothschild"
-//     writeup.innerHTML = "what is happening"
-//     interviewsum.innerHTML = "gang"
-// }
