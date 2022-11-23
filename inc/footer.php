@@ -13,3 +13,13 @@
 <script src='../finalmlu/assets/js/network.js'></script>
 <script src='../finalmlu/assets/js/nwcheckers.js'></script>
 <script src='../finalmlu/assets/js/textchange.js'></script>
+
+
+
+<!-- TESTTTTSTTSTTE -->
+<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js" integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script>
+<link href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
+<script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+
+
+<script src='../finalmlu/assets/js/banklist.js'></script>

@@ -16,6 +16,13 @@
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/networktable.css">
 </head>
+<?php
+$userid = (int)$_SESSION['user_id'];
+$banksql = "SELECT * FROM bankorder WHERE userid = :userid order by display_order";
+$getbankshit = $con->prepare($banksql);
+$getbankshit->bindParam('userid', $userid);
+$getbankshit->execute();
+?>
 <body>
     <nav class="nav_bar_sticky">
         <div class="logocont">
@@ -34,113 +41,21 @@
             <li class="navbar_cont">
                 <a href="TBD">About Us</a>
             </li>
+            <li class="navbar_cont">
+                <a href="../finalmlu/logout.php">Log Out</a>
+            </li>
         </ul>
     </nav>
     <div class="bank_list_cont">
-        <ul class="bank_list">
-            <li class="rothschild switch">
-                <p>Rothshchild</p>
-            </li>
-            <li class="moelis switch">
-                <p>Moelis</p>
-            </li>
-            <li class="allen switch">
-                <p>Allen & Co</p>
-            </li>
-            <li class="bofa switch">
-                <p>Bank of America</p>
-            </li>
-            <li class="barclays switch">
-                <p>Barclays</p>
-            </li>
-            <li class="bmo switch">
-                <p>BMO</p>
-            </li>
-            <li class="centerview switch">
-                <p>Centerview</p>
-            </li>
-            <li class="citi switch">
-                <p>Citi Bank</p>
-            </li>
-            <li class="credit switch">
-                <p>Credit Suisse</p>
-            </li>
-            <li class="cowen switch">
-                <p>Cowen</p>
-            </li>
-            <li class="deutsche switch">
-                <p>Deutsche Bank</p>
-            </li>
-            <li class="deutsche switch">
-                <p>Evercore</p>
-            </li>
-            <li class="financo switch">
-                <p>Financo</p>
-            </li>
-            <li class="goldman switch">
-                <p>Goldman Sachs</p>
-            </li>
-            <li class="greenhill switch">
-                <p>Greenhill</p>
-            </li>
-            <li class="guggenheim switch">
-                <p>Guggenheim</p>
-            </li>
-            <li class="houlihan switch">
-                <p>Houlihan Lokey</p>
-            </li>
-            <li class="jefferies switch">
-                <p>Jefferies</p>
-            </li>
-            <li class="jp switch">
-                <p>JP Morgan</p>
-            </li>
-            <li class="lazard switch">
-                <p>Lazard</p>
-            </li>
-            <li class="lion switch">
-                <p>LionTree</p>
-            </li>
-            <li class="macquarie switch">
-                <p>Macquarie</p>
-            </li>
-            <li class="mizuho switch">
-                <p>Mizuho</p>
-            </li>
-            <li class="morgan switch">
-                <p>Morgan Stanley</p>
-            </li>
-            <li class="mklein switch">
-                <p>M. Klein & Co</p>
-            </li>
-            <li class="perella switch">
-                <p>Perella Weinberg</p>
-            </li>
-            <li class="piper switch">
-                <p>Piper Sandler</p>
-            </li>
-            <li class="pjt switch">
-                <p>PJT</p>
-            </li>
-            <li class="qatalyst switch">
-                <p>Qatalyst Partners</p>
-            </li>
-            <li class="raine switch">
-                <p>Raine</p>
-            </li>
-            <li class="rbc switch">
-                <p>RBC</p>
-            </li>
-            <li class="solomon switch">
-                <p>Solomon Partners</p>
-            </li>
-            <li class="ubs switch">
-                <p>UBS</p>
-            </li>
-            <li class="william switch">
-                <p>William Blair</p>
-            </li>
-        </ul>
+        <table class="banklisttable" id="banklist">
+            <tbody class="row_position">
+            <?php while($data = $getbankshit->fetch(PDO::FETCH_ASSOC)){ ?>
+                <tr id="<?php echo $data["rowid"]?>">
+                    <td class="switch" id="<?php echo $data['bankid'];?>"><?php echo $data['bank_name'];?></td>
+                </tr>
+            <?php } ?>
+            </tbody>
+        </table>
     </div>
     <div class="bank_info_cont">
         <h3 class="bank_name" id="bankname">BANK NAME</h3>
@@ -180,7 +95,6 @@
         </div>
     </div>
     <?php require_once "inc/footer.php"; ?>
-    <script src='../finalmlu/assets/js/network.js'></script>
 </body>
 </html>
 

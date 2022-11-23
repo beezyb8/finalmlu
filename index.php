@@ -14,10 +14,12 @@
     <!-- Need CSS THIS WILL BE HOMEPAGE -->
 </head>
 <body>
-    <?php 
-        echo "Hello, today is: ";
-        echo date("Y m d");
+    <?php
+        echo date("m"); echo "/"; echo date("d"); echo "/"; echo date("Y");
     ?>
+    <div class="video box">
+        <!-- <img src="../finalmlu/images/logos/mlunotext.jpg" alt="No Image" class="tempvideo"> -->
+    </div>
     <div class="link-bucks">
         <span class="login-link-buck">
             <a href="login.php">Login</a>

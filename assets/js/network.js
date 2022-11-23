@@ -11,7 +11,7 @@ closebtn.onclick = () =>{
 }
 
 $(document)
-.on('click', "li.switch", function(event) {
+.on('click', ".switch", function(event) {
 
     const nocontacts = document.querySelector(".nocontacts");
     var $bank = document.querySelector("#bankname");

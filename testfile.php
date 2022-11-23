@@ -15,6 +15,13 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/test.css">
 </head>
+<?php
+$userid = (int)$_SESSION['user_id'];
+$banksql = "SELECT * FROM bankorder WHERE userid = :userid order by display_order";
+$getbankshit = $con->prepare($banksql);
+$getbankshit->bindParam('userid', $userid);
+$getbankshit->execute();
+?>
 <body>
     <nav class="nav_bar_sticky">
         <div class="logocont">
@@ -36,150 +43,13 @@
         </ul>
     </nav>
     <div class="bank_list_cont">
-        <table class="banklisttable">
-            <tbody>
-                <tr>
-                    <td><p class="rothschild switch">Rothshchild</p></td>
+        <table class="banklisttable" id="banklist">
+            <tbody class="row_position">
+            <?php while($data = $getbankshit->fetch(PDO::FETCH_ASSOC)){ ?>
+                <tr id="<?php echo $data["rowid"]?>">
+                    <td class="switch" id="<?php echo $data['bankid'];?>"><?php echo $data['bank_name'];?></td>
                 </tr>
-                <tr>
-                    <td><p class="moelis switch">Moelis</p></td>
-                </tr>
-                <tr>
-                    <td><p class="allen switch">Allen & Co</p></td>
-                </tr>
-                <tr>
-                    <td><p class="bofa switch">Bank of America</p></td>
-                </tr>
-                <!-- <tr>
-                    <li class="moelis switch">
-                        <p>Moelis</p>
-                    </li>
-                </tr>
-                <tr>
-                    <li class="allen switch">
-                        <p>Allen & Co</p>
-                    </li>
-                </tr>
-                <tr>
-                    <li class="bofa switch">
-                        <p>Bank of America</p>
-                    </li>
-                </tr>
-                <tr>
-                    <li class="deutsche switch">
-                        <p>Evercore</p>
-                    </li>
-                </tr>
-                <tr>
-                    <li class="financo switch">
-                        <p>Financo</p>
-                    </li>
-                </tr>
-                <tr>
-                    <li class="goldman switch">
-                        <p>Goldman Sachs</p>
-                    </li>
-                </tr>
-                <tr>
-                    <li class="greenhill switch">
-                        <p>Greenhill</p>
-                    </li>
-                </tr>
-                <tr>
-                    <li class="guggenheim switch">
-                        <p>Guggenheim</p>
-                    </li>
-                </tr>
-                <tr>
-                    <li class="houlihan switch">
-                        <p>Houlihan Lokey</p>
-                    </li>
-                </tr>
-                <tr>
-                    <li class="jefferies switch">
-                        <p>Jefferies</p>
-                    </li>
-                </tr>
-                <tr>
-                    <li class="jp switch">
-                        <p>JP Morgan</p>
-                    </li>
-                </tr>
-                <tr>
-                    <li class="lazard switch">
-                        <p>Lazard</p>
-                    </li>
-                </tr>
-                <tr>
-                    <li class="lion switch">
-                        <p>LionTree</p>
-                    </li>
-                </tr>
-                <tr>
-                    <li class="macquarie switch">
-                        <p>Macquarie</p>
-                    </li>
-                </tr>
-                <tr>
-                    <li class="mizuho switch">
-                        <p>Mizuho</p>
-                    </li>
-                </tr>
-                <tr>
-                    <li class="morgan switch">
-                        <p>Morgan Stanley</p>
-                    </li>
-                </tr>
-                <tr>
-                    <li class="mklein switch">
-                        <p>M. Klein & Co</p>
-                    </li>
-                </tr>
-                <tr>
-                    <li class="perella switch">
-                        <p>Perella Weinberg</p>
-                    </li>
-                </tr>
-                <tr>
-                    <li class="piper switch">
-                        <p>Piper Sandler</p>
-                    </li>
-                </tr>
-                <tr>
-                    <li class="pjt switch">
-                        <p>PJT</p>
-                    </li>
-                </tr>
-                <tr>
-                    <li class="qatalyst switch">
-                        <p>Qatalyst Partners</p>
-                    </li>
-                </tr>
-                <tr>
-                    <li class="raine switch">
-                        <p>Raine</p>
-                    </li>
-                </tr>
-                <tr>
-                    <li class="rbc switch">
-                        <p>RBC</p>
-                    </li>
-                </tr>
-                <tr>
-                    <li class="solomon switch">
-                        <p>Solomon Partners</p>
-                    </li>
-                </tr>
-                <tr>
-                    <li class="ubs switch">
-                        <p>UBS</p>
-                    </li>
-                </tr>
-                <tr>
-                    <li class="william switch">
-                        <p>William Blair</p>
-                    </li>
-                </tr> -->
+            <?php } ?>
             </tbody>
         </table>
     </div>
@@ -220,5 +90,6 @@
             <button type="" class="closemodal">Close Window</button>
         </div>
     </div>
+    <?php require_once "inc/footer.php"; ?>
 </body>
 </html>

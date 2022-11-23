@@ -1,11 +1,21 @@
 body{
-    background-color: gainsboro;
+    background-color: white;
     margin: 10px;
     /* EDIT AT LATER DATE */
 }
 
+.videobox{
+    border: 8px solid #244f89;
+    width: 100%;
+}
+
+.tempvideo{
+    width: 100%;
+    height: auto;
+}
+
 .link-bucks{
-    border: 5px solid black;
+    border: 5px solid #244f89;
 }
 
 .login-link-buck{
@@ -22,10 +32,11 @@ body{
 
 a{
     text-decoration: none;
-    color: black;
+    color: #244f89;
 }
 
 a:hover{
     text-shadow: 3px black;
-    color: red;
+    color: #244f89;
+    font-weight: bold;
 }

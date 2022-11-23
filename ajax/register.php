@@ -28,6 +28,24 @@
 
             $_SESSION['user_id'] = (int) $user_id;
 
+            $banks = array("Rothschild", "Moelis","Allen & Co", "Bank of America","Barclays","BMO","Centerview","Citi Bank", "Credit Suisse", "Cowen", "Deutsche Bank", "Evercore","Financo","Goldman Sachs","Greenhill","Guggenheim","Houlihan Lokey","Jefferies","JP Morgan","Lazard","LionTree","Macquarie","Mizuho","Morgan Stanley","M. Klein & Co","Perella Weinberg","Piper Sandler","PJT","Qatalyst Partners","Raine","RBC","Solomon Partners","UBS","William Blair");
+            // $banksid = array("rothschild", "moelis","allen", "bofa","barclays","bmo","centerview","citi", "creditsuisse", "cowen", "deutsche", "evercore","financo","goldman","greenhill","guggenheim","houlihan","jefferies","jpm","lazard","liontree","macquarie","mizuho","morganstanley","mklein","perella","piper","pjt","qatalyst","raine","rbc","solomon","ubs","williamblair");
+            $i = 1;
+            foreach($banks as $value){
+                $sql = "INSERT INTO bankorder(display_order, bank_name, bankid, userid) VALUES(:display_order, :bank, :bankid, :userid)";
+                $createtable = $con->prepare($sql);
+                $createtable -> bindParam(':display_order', $i, PDO::PARAM_INT);
+                $createtable -> bindParam(':bank', $value, PDO::PARAM_STR);
+                $bankid = strtolower($value);
+                $bankid = str_replace(" ","",$bankid);
+                $bankid = str_replace("&","",$bankid);
+                $bankid = str_replace(".","",$bankid);
+                $createtable -> bindParam(':bankid', $bankid, PDO::PARAM_STR);
+                $createtable -> bindParam(':userid', $user_id, PDO::PARAM_INT);
+                $createtable->execute();
+                $i++;
+            }
+
             $return['redirect'] = '../finalmlu/login.php?message=loginbro';
             $return['is_logged_in'] = true;
 
@@ -35,10 +53,8 @@
             ///THIS WILL BE THE DASHBOARD^^^^
 
         }
-
-//make sure user dne
-//make sure user can and is added
-//return the proper information back to JS to redirect
+        //CREATE BANK LIST TABLE
+        //Figure out, maybe go straightwe into it!
 
         echo json_encode($return, JSON_PRETTY_PRINT); exit;
 
