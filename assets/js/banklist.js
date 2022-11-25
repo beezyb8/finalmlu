@@ -19,9 +19,5 @@ $(document).ready(function(){
             data:{
                 allData: adata
             },
-            success:function(){
-                alert("Change Saved");
-            }
         })
-
     }

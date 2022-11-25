@@ -139,7 +139,6 @@ $(document)
 
     var contact = {
         contactname: $("input[id='conname']", $form).val(),
-        notes: $("input[id='notes']", $form).val(),
         bank: $bank
     };
 
@@ -181,6 +180,11 @@ $(document)
             var marker = "cd"+value.contact_id.toString();
             var txmarker = value.contact_id.toString();
             var btnmarker = "bt"+value.contact_id.toString();
+            
+            
+            var banknotes = "<textarea id='banknotes' class='banknotes'></textarea><br><button type='submit' id='banknoteconf' class='bankntotes'>confirm</button>";
+
+
             event_data += "<tr class='"+marker+"'>";
             event_data += "<td class='contacttitle'>"+value.contact_name+'</td>';
             event_data += "<td class='notes'><textarea id='notetextarea' class='"+txmarker+"'>"+value.notes+"</textarea><br><button type='submit' id='textchangebtn' class='" +btnmarker+"'>confirm</button></td>";
@@ -202,6 +206,7 @@ $(document)
             +"</form></td>";
             event_data += '</tr>';
         });
+
         $(".table_body").html(event_data);
         $.each(data.contacts, function(index, value){
             // Change color based on checks

@@ -1,14 +1,26 @@
 To Do:
-NavBar
-2- Create overflow button for navbar (YOUTUBE)
+h2. Create bankbybank notes
+    simple textarea width = 99%
+Also create field for application link
+Make email area look better
 
-DASHBOARD
-Design
+- bankshift.js - create pages for each bank, can do when done with ^^^ + write-ups!!!
+
 3- Logos for each bank download
+h3.finalize navbar titles
+h4. make navbar reactive
+
+@media(max-width: Change)
+DO this after everything else done!
+
+Forgot password + payment!
+h5. design calendar page
+h6. about us page
+h7. your account page
 
 
 
-- bankshift.js - create changes for all banks, can do when done with ^^^ + write-ups!!!
+
 
 
 
@@ -30,4 +42,6 @@ MY ACCOUNT - 6
 
 
 
+Email Template
+Thank you + cold email - place to write your templates!
 

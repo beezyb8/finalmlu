@@ -2,6 +2,44 @@ const bankname = document.querySelector('#bankname')
 const writeup = document.querySelector('#writeup')
 const interviewsum = document.querySelector('#interviewsum')
 const banklogo = document.querySelector(".banklogo")
+const writtencont = document.querySelector(".writtencont")
+
+
+
+class NewBank {
+    constructor(bankname,bankid){
+        this.bankname = bankname;
+        this.bankid = bankid;
+        this.switchtothis = function(){
+            this.button = document.querySelector("#"+this.bankid);
+            this.button.onclick = () =>{
+                bankname.innerHTML = this.bankname;
+                writeup.innerHTML = "";
+                interviewsum.innerHTML = "";
+            }
+        }
+    }
+}
+
+var bankidlistarray = ['allenco','bankofamerica','barclays','bmo','centerview','citibank','cowen','creditsuisse','deutschebank','evercore','financo','goldmansachs','greenhill','guggenheim','houlihanlokey','jefferies','jpmorgan','lazard','liontree','macquarie','mizuho','mkleinco','moelis','morganstanley','perellaweinberg','pipersandler','pjt','qatalystpartners','raine','rbc','rothschild','solomonpartners','ubs','williamblair'] 
+
+// Manipulate this below!!!
+// Create an OG PAGE with elements explaining how to use this page!
+$(document)
+.on('click', ".switch", function(event) {
+    var thisid = $(this).attr("id");
+    var thistitle = $(this).attr("value");
+    if(!bankidlistarray.includes(thisid)){
+        bankname.innerHTML = thistitle;
+        writtencont.style.display = "none";
+        banklogo.style.display = "none";
+    } else{
+        writtencont.style.display = "block";
+        banklogo.style.display = "block";
+    }
+})
+
+
 
 const rothschild_button = document.querySelector('#rothschild')
 rothschild_button.onclick = () =>{
@@ -22,6 +60,7 @@ moelis_button.onclick = () =>{
 const allen_button = document.querySelector('#allenco')
 allen_button.onclick = () =>{
     bankname.innerHTML = "Allen & Co"
+    writtencont.style.display = "block"
     writeup.innerHTML = "N/A"
     interviewsum.innerHTML = "N/A"
 }

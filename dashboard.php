@@ -51,9 +51,22 @@ $getbankshit->execute();
             <tbody class="row_position">
             <?php while($data = $getbankshit->fetch(PDO::FETCH_ASSOC)){ ?>
                 <tr id="<?php echo $data["rowid"]?>">
-                    <td class="switch" id="<?php echo $data['bankid'];?>"><?php echo $data['bank_name'];?></td>
+                    <td class="switch" id="<?php echo $data['bankid'];?>" value="<?php echo $data['bank_name'];?>"><?php echo $data['bank_name'];?></td>
                 </tr>
             <?php } ?>
+                <tr>
+                    <!-- WORKING HERE!!! -->
+                    <td class="addbank" id=""><p class="addbankp">Create A Company Page We Don't Have</p>
+                        <div class="addbankcont">
+                            <form class="addbankform">
+                                <label class="addbankname" id="compname">Company Name</label><br>
+                                <input class="companyname" id="compname"><br>
+                                <button class="submit" id="compname">Add Comp</button><br>
+                            </form>
+                            <button class="exitaddform" id="compname">Exit</button><br>
+                        </div>
+                    </td>
+                </tr>
             </tbody>
         </table>
     </div>
@@ -61,11 +74,13 @@ $getbankshit->execute();
         <h3 class="bank_name" id="bankname">BANK NAME</h3>
         <img src="../finalmlu/images/logos/mlunotext.jpg" alt="Bank Logo" class="banklogo">
         <div class="spacer"></div>
-        <h6 id="item_title" class="toptitle">Bank Description</h6>
-        <p id="writeup">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis excepturi mollitia eos fugit ut vero aliquid soluta sed, alias iste ipsam non labore necessitatibus voluptatum, saepe, ex amet in! Velit.</p>
-        <h6 id="item_title" class="bottomtitle">Bank Interview Process</h6>
-        <p id="interviewsum">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis excepturi mollitia eos fugit ut vero aliquid soluta sed, alias iste ipsam non labore necessitatibus voluptatum, saepe, ex amet in! Velit.</p>
-        <h6 id="emailformat">gang@gmail.com</h6>
+        <div class="writtencont">
+            <h6 id="item_title" class="toptitle">Bank Description</h6>
+            <p id="writeup">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis excepturi mollitia eos fugit ut vero aliquid soluta sed, alias iste ipsam non labore necessitatibus voluptatum, saepe, ex amet in! Velit.</p>
+            <h6 id="item_title" class="bottomtitle">Bank Interview Process</h6>
+            <p id="interviewsum">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis excepturi mollitia eos fugit ut vero aliquid soluta sed, alias iste ipsam non labore necessitatibus voluptatum, saepe, ex amet in! Velit.</p>
+            <h6 id="emailformat">gang@gmail.com</h6>
+        </div>
         <div class="nocontacts">No Contacts!</div>
         <table class="nworktable">
             <tr>
@@ -94,6 +109,7 @@ $getbankshit->execute();
             <button type="" class="closemodal">Close Window</button>
         </div>
     </div>
+    <!-- Need a footer or space on bottom of the page -->
     <?php require_once "inc/footer.php"; ?>
 </body>
 </html>
