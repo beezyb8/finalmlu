@@ -1,6 +1,13 @@
 To Do:
 h2. Create bankbybank notes
     simple textarea width = 99%
+Make it work for new banks!!
+Issue is Special Chars! works without special chars!
+
+
+
+
+
 Also create field for application link
 Make email area look better
 

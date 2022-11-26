@@ -11,6 +11,7 @@
         $bank = (string)$_POST['bank'];
         $bankid = (string)$_POST['bankid'];
         $displayorder = (string)$_POST['displayrank'];
+        $notes = "NOTES:";
 
 
 
@@ -21,6 +22,13 @@
         $insertbank -> bindParam(':bankid', $bankid, PDO::PARAM_STR);
         $insertbank -> bindParam(':userid', $user_id, PDO::PARAM_INT);
         $insertbank->execute();
+
+        $notessql = "INSERT INTO banknotes(notestxt, bankname, userid) VALUES(:notestxt, :bankname, :userid)";
+        $createbanknotes = $con->prepare($notessql);
+        $createbanknotes -> bindParam(':notestxt', $notes, PDO::PARAM_STR);
+        $createbanknotes -> bindParam(':bankname', $bank, PDO::PARAM_STR);
+        $createbanknotes -> bindParam(':userid', $user_id, PDO::PARAM_INT);
+        $createbanknotes->execute();
 
         echo json_encode($return, JSON_PRETTY_PRINT); exit;
     }

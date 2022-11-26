@@ -233,7 +233,25 @@ thead{
     margin: 5px 0px 10px 0px;
 }
 
+.banknotescont{
+    width: 100%;
+}
+
+.banknotes{
+    width: 98%;
+}
+
+#banknotesbutton{
+    display: none;
+}
+
 .toptitle{
+    margin: 10px 0px 0px 0px;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+.notestitle{
     margin: 10px 0px 0px 0px;
     font-size: 20px;
     text-decoration: underline;

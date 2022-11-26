@@ -55,7 +55,7 @@ $getbankshit->execute();
                 </tr>
             <?php } ?>
                 <tr>
-                    
+
                     <td class="addbank" id=""><p class="addbankp">Create A Company Page We Don't Have</p>
                         <div class="addbankcont">
                             <form class="addbankform">
@@ -74,6 +74,10 @@ $getbankshit->execute();
         <h3 class="bank_name" id="bankname">BANK NAME</h3>
         <img src="../finalmlu/images/logos/mlunotext.jpg" alt="Bank Logo" class="banklogo">
         <div class="spacer"></div>
+        <div class="notescont">
+            <h6 id="item_title" class="notestitle">Your Notes:</h6>
+            <div class="banknotescont"><textarea class="banknotes"></textarea></div>
+        </div>
         <div class="writtencont">
             <h6 id="item_title" class="toptitle">Bank Description</h6>
             <p id="writeup">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis excepturi mollitia eos fugit ut vero aliquid soluta sed, alias iste ipsam non labore necessitatibus voluptatum, saepe, ex amet in! Velit.</p>

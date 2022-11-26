@@ -14,6 +14,7 @@
 <script src='../finalmlu/assets/js/nwcheckers.js'></script>
 <script src='../finalmlu/assets/js/textchange.js'></script>
 <script src='../finalmlu/assets/js/addbank.js'></script>
+<script src='../finalmlu/assets/js/banknotes.js'></script>
 
 
 
