@@ -262,3 +262,17 @@ thead{
     font-size: 20px;
     text-decoration: underline;
 }
+
+#emailformat{
+    padding: 0px 0px 10px 0px;
+    margin: 0px;
+    font-size: 15px;
+}
+
+.notescont{
+    display: none;
+}
+
+.contactcont{
+    display: none;
+}

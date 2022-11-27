@@ -3,6 +3,9 @@ const writeup = document.querySelector('#writeup')
 const interviewsum = document.querySelector('#interviewsum')
 const banklogo = document.querySelector(".banklogo")
 const writtencont = document.querySelector(".writtencont")
+const notescont = document.querySelector(".notescont")
+const contactcont = document.querySelector(".contactcont")
+const homepage = document.querySelector(".homepage")
 
 
 
@@ -33,9 +36,15 @@ $(document)
         bankname.innerHTML = thistitle;
         writtencont.style.display = "none";
         banklogo.style.display = "none";
+        notescont.style.display = "block";
+        contactcont.style.display = "block";
+        homepage.style.display = "none";
     } else{
         writtencont.style.display = "block";
         banklogo.style.display = "block";
+        notescont.style.display = "block";
+        contactcont.style.display = "block";
+        homepage.style.display = "none";
     }
 })
 

@@ -71,8 +71,19 @@ $getbankshit->execute();
         </table>
     </div>
     <div class="bank_info_cont">
-        <h3 class="bank_name" id="bankname">BANK NAME</h3>
+        <h3 class="bank_name" id="bankname">Welcome To My Leg Up</h3>
         <img src="../finalmlu/images/logos/mlunotext.jpg" alt="Bank Logo" class="banklogo">
+        <div class="homepage">
+            <p>Key features of this platform include</p>
+            <ul>
+                <li>Bank write-ups for each bank based on interviews with employees/interns at those banks</li>
+                <li>A notes section for each bank</li>
+                <li>Networking tables that you can access for each bank with markers to stay organized</li>
+                <li>You can reorganize the banks on the left to fit your personal rankings by dragging the tabs up/down</li>
+                <li>You can add a bank or company we don't have at the bottom of the bank list on the left</li>
+                <li>To get back to this page just refresh the page</li>
+            </ul>
+        </div>
         <div class="spacer"></div>
         <div class="notescont">
             <h6 id="item_title" class="notestitle">Your Notes:</h6>
@@ -85,20 +96,22 @@ $getbankshit->execute();
             <p id="interviewsum">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis excepturi mollitia eos fugit ut vero aliquid soluta sed, alias iste ipsam non labore necessitatibus voluptatum, saepe, ex amet in! Velit.</p>
             <h6 id="emailformat">gang@gmail.com</h6>
         </div>
-        <div class="nocontacts">No Contacts!</div>
-        <table class="nworktable">
-            <tr>
-                <th class="contacttitle">Contact Name</th>
-                <th class="notestitle">Notes</th>
-                <th class="notestitle"><p class="checkboxhead">Cold Email</p></th>
-                <th class="notestitle"><p class="checkboxhead">Call Set</p></th>
-                <th class="notestitle"><p class="checkboxhead">Call Had</p></th>
-                <th class="notestitle"><p class="checkboxhead">Thank You</p></th>
-            </tr>
-            <tbody class="table_body">
-            </tbody>
-        </table>
+        <div class="contactcont">
+            <div class="nocontacts">No Contacts!</div>
+            <table class="nworktable">
+                <tr>
+                    <th class="contacttitle">Contact Name</th>
+                    <th class="notestitle">Notes</th>
+                    <th class="notestitle"><p class="checkboxhead">Cold Email</p></th>
+                    <th class="notestitle"><p class="checkboxhead">Call Set</p></th>
+                    <th class="notestitle"><p class="checkboxhead">Call Had</p></th>
+                    <th class="notestitle"><p class="checkboxhead">Thank You</p></th>
+                </tr>
+                <tbody class="table_body">
+                </tbody>
+            </table>
         <button class="newcontact">Add new contact</button>
+        </div>
         <br>
         <div class="contactmodal">
             <form class = "js-add-contact">

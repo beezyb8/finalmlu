@@ -1,19 +1,11 @@
-To Do:
-h2. Create bankbybank notes
-    simple textarea width = 99%
-Make it work for new banks!!
-Issue is Special Chars! works without special chars!
-
-
-
-
-
 Also create field for application link
 Make email area look better
 
 - bankshift.js - create pages for each bank, can do when done with ^^^ + write-ups!!!
 
 3- Logos for each bank download
+
+
 h3.finalize navbar titles
 h4. make navbar reactive
 
@@ -21,6 +13,7 @@ h4. make navbar reactive
 DO this after everything else done!
 
 Forgot password + payment!
+
 h5. design calendar page
 h6. about us page
 h7. your account page
