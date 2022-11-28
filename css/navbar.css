@@ -4,6 +4,7 @@ body{
     padding: 0px;
     padding-bottom: 100px;
     overflow-x: hidden;
+    font-family: serif;
 }
 
 .nav_bar_sticky{
@@ -108,7 +109,7 @@ thead{
 .switch:hover{
     font-size: 20px;
     text-decoration: underline;
-    cursor: pointer;
+    cursor: all-scroll;
     font-weight: 650;
 }
 

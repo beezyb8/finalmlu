@@ -12,6 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/navbaractual.css">
+    <link rel="stylesheet" href="css/bestpractices.css">
 </head>
 <body>
     <nav class="nav_bar_sticky">
@@ -19,6 +20,7 @@
             <img src="../finalmlu/images/logos/mluhzltext.jpg" alt="MLU logo" class="logo">
         </div>
         <ul class="nav_cont_list">
+            <!-- Big Boxes -->
             <li class="navbar_cont">
                 <a href="dashboard.php">Dashboard</a>
                 </li>
@@ -37,6 +39,32 @@
         </ul>
     </nav>
     <div class="bodycont">
+        <div class="header">
+            <h1>Our Perceived Best Practices</h1>
+            <p><b>This advice was gathered and put together through personal experience, research, and interviews.</b></p>
+        </div>
+        <div class="pagelinks">
+            <ul class="pagelinks_cont">
+                <li class="">
+                    <a href="">Dashboard</a>
+                </li>
+                <li class="">
+                    <a href="">Dashboard</a>
+                </li>
+                <li class="">
+                    <a href="">Dashboard</a>
+                </li>
+                <li class="">
+                    <a href="">Dashboard</a>
+                </li>
+                <li class="">
+                    <a href="">Dashboard</a>
+                </li>
+            </ul>
+        </div>
+        <div class="body">
+            
+        </div>
     </div>
 </body>
 </html>

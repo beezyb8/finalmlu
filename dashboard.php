@@ -33,16 +33,16 @@ $getbankshit->execute();
                 <a href="dashboard.php">Dashboard</a>
                 </li>
             <li class="navbar_cont">
-                <a href="timing.php">Your Nate!</a>
+                <a href="timing.php">Timing/Calendar</a>
             </li>
             <li class="navbar_cont">
                 <a href="TBD">Notifications</a>
             </li>
             <li class="navbar_cont">
-                <a href="TBD">About Us</a>
+                <a href="bestpractices.php">Best Practices</a>
             </li>
             <li class="navbar_cont">
-                <a href="../finalmlu/logout.php">Log Out</a>
+                <a href="../finalmlu/logout.php">Your Account</a>
             </li>
         </ul>
     </nav>
@@ -100,7 +100,7 @@ $getbankshit->execute();
             <div class="nocontacts">No Contacts!</div>
             <table class="nworktable">
                 <tr>
-                    <th class="contacttitle">Contact Name</th>
+                    <th class="contacttitle">Contact Name<br><button class="editcontbtn">Edit</button></th>
                     <th class="notestitle">Notes</th>
                     <th class="notestitle"><p class="checkboxhead">Cold Email</p></th>
                     <th class="notestitle"><p class="checkboxhead">Call Set</p></th>
@@ -128,6 +128,7 @@ $getbankshit->execute();
     </div>
     <!-- Need a footer or space on bottom of the page -->
     <?php require_once "inc/footer.php"; ?>
+    <script src='../finalmlu/assets/js/editcontact.js'></script>
 </body>
 </html>
 

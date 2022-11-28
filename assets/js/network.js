@@ -14,6 +14,7 @@ $(document)
 .on('click', ".switch", function(event) {
 
     const nocontacts = document.querySelector(".nocontacts");
+    const nwork = document.querySelector(".nworktable");
     var $bank = document.querySelector("#bankname");
     var $bank = $bank.innerHTML;
     var bankname = {
@@ -57,7 +58,7 @@ $(document)
             var txmarker = value.contact_id.toString();
             var btnmarker = "bt"+value.contact_id.toString();
             event_data += "<tr class='"+marker+"'>";
-            event_data += "<td class='contacttitle'>"+value.contact_name+'</td>';
+            event_data += "<td class='contacttitle' id='ctcttile"+txmarker+"'value='"+value.contact_name+"'>"+value.contact_name+"<br><button class='editct' id='"+txmarker+"'>edit</button></td>";
             event_data += "<td class='notes'><textarea id='notetextarea' class='"+txmarker+"'>"+value.notes+"</textarea><br><button type='submit' id='textchangebtn' class='" +btnmarker+"'>confirm</button></td>";
             event_data += "<td class='coldemail'>"+
             "<form class='coldcheck_checks "+value.contact_id+"'>"+
@@ -81,8 +82,10 @@ $(document)
         if(event_data.length > 0){
             $(".table_body").html(event_data);
             nocontacts.style.display = "none";
+            nwork.style.display = "inline-block";
         } else {
             nocontacts.style.display = "inline-block";
+            nwork.style.display = "none";
             $(".table_body").html(event_data);
         }
 
@@ -137,6 +140,9 @@ $(document)
     var $bank = document.querySelector("#bankname");
     var $bank = $bank.innerHTML;
 
+    const nocontacts = document.querySelector(".nocontacts");
+    const nwork = document.querySelector(".nworktable");
+
     var contact = {
         contactname: $("input[id='conname']", $form).val(),
         bank: $bank
@@ -179,9 +185,10 @@ $(document)
             /*console.log(value);*/
             var marker = "cd"+value.contact_id.toString();
             var txmarker = value.contact_id.toString();
+            // var editmarker = "edt"+value.contact_id.toString();
             var btnmarker = "bt"+value.contact_id.toString();
             event_data += "<tr class='"+marker+"'>";
-            event_data += "<td class='contacttitle'>"+value.contact_name+'</td>';
+            event_data += "<td class='contacttitle' id='ctcttile"+txmarker+"'value='"+value.contact_name+"'>"+"'>"+value.contact_name+"<br><button class='editct' id='"+txmarker+"'>edit</button></td>";
             event_data += "<td class='notes'><textarea id='notetextarea' class='"+txmarker+"'>"+value.notes+"</textarea><br><button type='submit' id='textchangebtn' class='" +btnmarker+"'>confirm</button></td>";
             event_data += "<td class='coldemail'>"+
             "<form class='coldcheck_checks "+value.contact_id+"'>"+
@@ -228,6 +235,9 @@ $(document)
                 thisrow.classList.remove("thankyoudone")
             }
         })
+
+        nwork.style.display = "inline-block";
+        nocontacts.style.display = "none";
     })
 
     .fail(function ajaxFailed(data) {

@@ -1,0 +1,28 @@
+.bodycont{
+    justify-content: center;
+    margin: auto;
+    margin-top: 72px;
+    width: 65%;
+    border: 10px solid #244f89;
+}
+
+.header{
+    padding: 10px 50px;
+    border-bottom: 5px solid #244f89;
+    padding-bottom: 5px;
+}
+
+.header>h1{
+    margin-top: 5px;
+    text-align: center;
+    color: #244f89;
+    text-decoration: underline;
+    margin-bottom: 0px;
+}
+
+.header>p{
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    text-align: center;
+}

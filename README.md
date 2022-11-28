@@ -1,47 +1,30 @@
-Also create field for application link
-Make email area look better
-
-- bankshift.js - create pages for each bank, can do when done with ^^^ + write-ups!!!
-
-3- Logos for each bank download
+FINISH CONTACT EDITS!!
 
 
-h3.finalize navbar titles
-h4. make navbar reactive
+GENERAL
+finalize navbar titles - (dashboard, notificaitons, best practices, your account)
+make navbar reactive
 
+DASHBOARD
+When click on a swithc send to top of the page - dashboard
+
+
+BEST PRACTICES
+best practices - make work and look pretty, big buttons click to change whole page
+(Neworking,Emails,Campus Visits,Interview Prep,Interview Advice,Formats)
+
+
+YOUR ACCOUNT
+Forgot password + payment! + your account page
+
+
+
+
+
+CAN WAIT
+bankshift.js - create pages for each bank, can do when done with ^^^ + write-ups!!!
+Logos for each bank download
+
+NEEDS TO WAIT
 @media(max-width: Change)
 DO this after everything else done!
-
-Forgot password + payment!
-
-h5. design calendar page
-h6. about us page
-h7. your account page
-
-
-
-
-
-
-
-TIMING
-- figure out how Nate wants it to look
-
-ABOUT US
-4- Figure out what we want!
-
-LOGIN
-5-forgot password
-
-
-
-
-MY ACCOUNT - 6
-- Logout - easy
-- ?
-
-
-
-Email Template
-Thank you + cold email - place to write your templates!
-
