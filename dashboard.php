@@ -13,8 +13,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/navbaractual.css">
+    <link rel="stylesheet" href="css/dashbody.css">
     <link rel="stylesheet" href="css/networktable.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
 </head>
 <?php
 $userid = (int)$_SESSION['user_id'];
@@ -30,19 +32,13 @@ $getbankshit->execute();
         </div>
         <ul class="nav_cont_list">
             <li class="navbar_cont">
-                <a href="dashboard.php">Dashboard</a>
-                </li>
-            <li class="navbar_cont">
-                <a href="timing.php">Timing/Calendar</a>
+                <a href="dashboard.php"><i class="bi bi-house" id="dashicon"></i><br><br><p class="innernav_txt">Dashboard<p></a>
             </li>
             <li class="navbar_cont">
-                <a href="TBD">Notifications</a>
+                <a href="bestpractices.php"><i class="bi bi-pass" id="dashicon"></i><br><br><p class="innernav_txt">Best Practices<p></a>
             </li>
             <li class="navbar_cont">
-                <a href="bestpractices.php">Best Practices</a>
-            </li>
-            <li class="navbar_cont">
-                <a href="../finalmlu/logout.php">Your Account</a>
+            <a href="bestpractices.php"><i class="bi bi-gear" id="dashicon"></i><br><br><p class="innernav_txt">Your Account<p></a>
             </li>
         </ul>
     </nav>
@@ -61,9 +57,10 @@ $getbankshit->execute();
                             <form class="addbankform">
                                 <label class="addbankname" id="compname">Company Name</label><br>
                                 <input class="companyname" id="compname"><br>
-                                <button class="submit" id="compname">Add Comp</button><br>
+                                <button type="submit" class="submit bi bi-plus-square bankaddsub" id="compname"></button>
+                                <button type="button" class="exitaddform bi bi-x-square bankaddexit" id="compname"></button><br>
+                                <!-- STYLE^^ -->
                             </form>
-                            <button class="exitaddform" id="compname">Exit</button><br>
                         </div>
                     </td>
                 </tr>
@@ -100,7 +97,7 @@ $getbankshit->execute();
             <div class="nocontacts">No Contacts!</div>
             <table class="nworktable">
                 <tr>
-                    <th class="contacttitle">Contact Name<br><button class="editcontbtn">Edit</button></th>
+                    <th class="contacttitle">Contact Name<br><button class="editcontbtn bi bi-pencil-square" id="editbtnid"> Edit</button></th>
                     <th class="notestitle">Notes</th>
                     <th class="notestitle"><p class="checkboxhead">Cold Email</p></th>
                     <th class="notestitle"><p class="checkboxhead">Call Set</p></th>

@@ -1,12 +1,7 @@
-FINISH CONTACT EDITS!!
-
-
 GENERAL
 finalize navbar titles - (dashboard, notificaitons, best practices, your account)
+ADD ICONS
 make navbar reactive
-
-DASHBOARD
-When click on a swithc send to top of the page - dashboard
 
 
 BEST PRACTICES
@@ -28,3 +23,10 @@ Logos for each bank download
 NEEDS TO WAIT
 @media(max-width: Change)
 DO this after everything else done!
+
+
+
+
+Freeman
+- Make clear internship description
+- Dates when clicked

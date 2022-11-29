@@ -30,6 +30,7 @@ var bankidlistarray = ['allenco','bankofamerica','barclays','bmo','centerview','
 // Create an OG PAGE with elements explaining how to use this page!
 $(document)
 .on('click', ".switch", function(event) {
+    scroll(0,0)
     var thisid = $(this).attr("id");
     var thistitle = $(this).attr("value");
     if(!bankidlistarray.includes(thisid)){

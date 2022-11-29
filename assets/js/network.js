@@ -58,7 +58,7 @@ $(document)
             var txmarker = value.contact_id.toString();
             var btnmarker = "bt"+value.contact_id.toString();
             event_data += "<tr class='"+marker+"'>";
-            event_data += "<td class='contacttitle' id='ctcttile"+txmarker+"'value='"+value.contact_name+"'>"+value.contact_name+"<br><button class='editct' id='"+txmarker+"'>edit</button></td>";
+            event_data += "<td class='contacttitle' id='ctcttile"+txmarker+"'value='"+value.contact_name+"'>"+value.contact_name+"<br><button class='editct bi bi-pencil-square' id='"+txmarker+"'></button></td>";
             event_data += "<td class='notes'><textarea id='notetextarea' class='"+txmarker+"'>"+value.notes+"</textarea><br><button type='submit' id='textchangebtn' class='" +btnmarker+"'>confirm</button></td>";
             event_data += "<td class='coldemail'>"+
             "<form class='coldcheck_checks "+value.contact_id+"'>"+
@@ -161,7 +161,7 @@ $(document)
         console.log('done');
         var event_data = '';
         $.each(data.contacts, function(index, value){
-            /*console.log(value);*/
+
             if(value.coldemail == 1){
                 coldchecker = 'checked'
             } else {
@@ -182,13 +182,11 @@ $(document)
             }  else {
                 thankyouchecker = ''
             }
-            /*console.log(value);*/
             var marker = "cd"+value.contact_id.toString();
             var txmarker = value.contact_id.toString();
-            // var editmarker = "edt"+value.contact_id.toString();
             var btnmarker = "bt"+value.contact_id.toString();
             event_data += "<tr class='"+marker+"'>";
-            event_data += "<td class='contacttitle' id='ctcttile"+txmarker+"'value='"+value.contact_name+"'>"+"'>"+value.contact_name+"<br><button class='editct' id='"+txmarker+"'>edit</button></td>";
+            event_data += "<td class='contacttitle' id='ctcttile"+txmarker+"'value='"+value.contact_name+"'>"+value.contact_name+"<br><button class='editct bi bi-pencil-square' id='"+txmarker+"'></button></td>";
             event_data += "<td class='notes'><textarea id='notetextarea' class='"+txmarker+"'>"+value.notes+"</textarea><br><button type='submit' id='textchangebtn' class='" +btnmarker+"'>confirm</button></td>";
             event_data += "<td class='coldemail'>"+
             "<form class='coldcheck_checks "+value.contact_id+"'>"+

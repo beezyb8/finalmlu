@@ -25,4 +25,135 @@
     margin-top: 10px;
     margin-bottom: 0px;
     text-align: center;
+    color: black;
+}
+
+.pagelinks{
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+    height: 125px;
+    position: relative;
+    align-items: center;
+}
+
+.pagelinks_cont{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.pagelinks_cont > .changecont {
+    display: flex;
+    text-align: center;
+    border-left: 2px solid #244f89;
+    border-right: 2px solid #244f89;
+    border-bottom: 10px solid #244f89;
+    padding: 5px;
+    margin: 0px;
+    width: 100%;
+    height: 92%;
+    position: relative;
+    top: 0;
+}
+
+.sectiontab{
+    vertical-align: middle;
+    margin: auto;
+}
+
+#gennw{
+    color: black;
+    background-color: rgb(190, 54, 54);
+}
+
+#gennw:hover{
+    color: black;
+    font-weight: bold;
+    text-decoration: underline;
+    cursor:grab;
+    background-color: rgb(119, 21, 21);
+}
+
+#sendemails{
+    color: black;
+    background-color: rgb(200, 169, 112);
+}
+
+#sendemails:hover{
+    color: black;
+    font-weight: bold;
+    text-decoration: underline;
+    cursor:grab;
+    background-color:rgb(130, 101, 47);
+}
+
+
+#compres{
+    color: black;
+    background-color: rgb(178, 178, 80);
+}
+
+#compres:hover{
+    color: black;
+    font-weight: bold;
+    text-decoration: underline;
+    cursor:grab;
+    background-color: rgb(116, 116, 57);
+}
+
+#behav{
+    color: black;
+    background-color: rgb(91, 168, 91);
+}
+
+#behav:hover{
+    color: black;
+    font-weight: bold;
+    text-decoration: underline;
+    cursor:grab;
+    background-color: rgb(48, 91, 48);
+}
+
+#techint{
+    color: black;
+    background-color: rgb(41, 98, 53);
+}
+
+#techint:hover{
+    color: black;
+    font-weight: bold;
+    text-decoration: underline;
+    cursor:grab;
+    background-color: rgb(31, 61, 38);
+}
+
+#formats{
+    color: black;
+    background-color: rgb(52, 91, 101);
+}
+
+#formats:hover{
+    color: black;
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: grab;
+    background-color: rgb(27, 48, 54);
+}
+
+.gennwcont{
+    padding: 10px;
+    font-size: 15px;
+}
+
+.gennwcont>p{
+    font-size: 18px;
+}
+
+.section_header{
+    display: block;
+    text-align: center;
 }

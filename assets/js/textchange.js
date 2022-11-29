@@ -24,7 +24,6 @@ thisbutton.onclick = () =>{
 
     .done(function ajaxDone(data) {
         thisbutton.style.display = "none";
-        alert("changes confirmed")
         thistextbox.css("height", "50px");
         })
     .fail(function ajaxFailed(data) {

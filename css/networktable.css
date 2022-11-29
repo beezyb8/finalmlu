@@ -55,3 +55,40 @@ table,th,td{
 .editct{
     display: none;
 }
+
+.editcontbtn{
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.editcontbtn:hover{
+    font-size: 14px;
+}
+
+.exiteditmode{
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+#editctnamebtn{
+    background-color: rgb(32, 142, 32);
+    border: 1px solid black;
+    border-radius: 10px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+#deletectnamebtn{
+    background-color: rgb(211, 77, 77);
+    border: 1px solid black;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.editct{
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid black;
+}
