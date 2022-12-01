@@ -52,7 +52,7 @@ $getbankshit->execute();
             <?php } ?>
                 <tr>
 
-                    <td class="addbank" id=""><p class="addbankp">Create A Company Page We Don't Have</p>
+                    <td class="addbank" id=""><p class="addbankp">Add Bank</p>
                         <div class="addbankcont">
                             <form class="addbankform">
                                 <label class="addbankname" id="compname">Company Name</label><br>

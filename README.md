@@ -10,7 +10,9 @@ best practices - make work and look pretty, big buttons click to change whole pa
 
 
 YOUR ACCOUNT
-Forgot password + payment! + your account page
+Forgot password 
++ payment! 
++ your account page
 
 
 

@@ -52,7 +52,8 @@
     border-left: 2px solid #244f89;
     border-right: 2px solid #244f89;
     border-bottom: 10px solid #244f89;
-    padding: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
     margin: 0px;
     width: 100%;
     height: 92%;
@@ -63,11 +64,12 @@
 .sectiontab{
     vertical-align: middle;
     margin: auto;
+    font-size: 18px;
 }
 
 #gennw{
     color: black;
-    background-color: rgb(190, 54, 54);
+    background-color: rgb(175, 82, 82);
 }
 
 #gennw:hover{
@@ -80,7 +82,7 @@
 
 #sendemails{
     color: black;
-    background-color: rgb(200, 169, 112);
+    background-color: rgb(205, 154, 43);
 }
 
 #sendemails:hover{
@@ -88,13 +90,12 @@
     font-weight: bold;
     text-decoration: underline;
     cursor:grab;
-    background-color:rgb(130, 101, 47);
+    background-color: rgb(124, 89, 24);
 }
-
 
 #compres{
     color: black;
-    background-color: rgb(178, 178, 80);
+    background-color: rgb(216, 171, 88);
 }
 
 #compres:hover{
@@ -102,12 +103,12 @@
     font-weight: bold;
     text-decoration: underline;
     cursor:grab;
-    background-color: rgb(116, 116, 57);
+    background-color:rgb(130, 101, 47);
 }
 
 #behav{
     color: black;
-    background-color: rgb(91, 168, 91);
+    background-color: rgb(230, 230, 100);
 }
 
 #behav:hover{
@@ -115,12 +116,12 @@
     font-weight: bold;
     text-decoration: underline;
     cursor:grab;
-    background-color: rgb(48, 91, 48);
+    background-color: rgb(162, 162, 56);
 }
 
 #techint{
     color: black;
-    background-color: rgb(41, 98, 53);
+    background-color: rgb(226, 201, 40);
 }
 
 #techint:hover{
@@ -128,12 +129,12 @@
     font-weight: bold;
     text-decoration: underline;
     cursor:grab;
-    background-color: rgb(31, 61, 38);
+    background-color:  rgb(151, 135, 27);
 }
 
 #formats{
     color: black;
-    background-color: rgb(52, 91, 101);
+    background-color: rgb(91, 168, 91);
 }
 
 #formats:hover{
@@ -141,7 +142,7 @@
     font-weight: bold;
     text-decoration: underline;
     cursor: grab;
-    background-color: rgb(27, 48, 54);
+    background-color: rgb(48, 91, 48);
 }
 
 .gennwcont{
@@ -156,4 +157,18 @@
 .section_header{
     display: block;
     text-align: center;
+}
+
+
+
+/* Media Edit Nav Bar */
+@media(max-width: 800px){
+    .pagelinks_cont{
+        display: block;
+    }
+    .changetab{
+        margin-right: 5px;
+        border: none;
+    }
+
 }
