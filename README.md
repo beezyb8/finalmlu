@@ -15,6 +15,14 @@ Forgot password
 + your account page
 
 
+Account Page
+ - your email
+ - registration date
+ - link to change password
+ - 
+ rgba(255,255,255,.5)
+
+
 
 
 
@@ -32,3 +40,12 @@ DO this after everything else done!
 Freeman
 - Make clear internship description
 - Dates when clicked
+
+TIming page
+
+Organizes Contacts by dates given as input
+- COld emails waiting by date
+- Applications ranked sooner to later, organized by 
+- Select your banks
+- Dark Mode/Light Mode
+- Cover letter at bottom

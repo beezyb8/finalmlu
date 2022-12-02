@@ -1,0 +1,38 @@
+.display_nav{
+    display: block;
+    margin-top: 78px;
+    overflow-x: hidden;
+}
+
+#colds{
+    margin: 20px 0px;
+    position: relative;
+    left: 15%;
+}
+
+/* #colds:hover{
+
+} */
+
+#calls_had{
+    margin: 20px 0px;
+    position: relative;
+    left: 34.9%;
+}
+
+#apps{
+    margin: 20px 0px;
+    position: relative;
+    left: 56%;
+}
+
+.contcont_body{
+    margin: 10px;
+}
+
+.cont_body{
+    border: 2px solid black;
+    border-radius: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+}

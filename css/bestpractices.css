@@ -68,8 +68,9 @@
 }
 
 #gennw{
-    color: black;
-    background-color: rgb(175, 82, 82);
+    color: #244f89;
+    background-color: white;
+    font-weight: bold;
 }
 
 #gennw:hover{
@@ -81,8 +82,9 @@
 }
 
 #sendemails{
-    color: black;
-    background-color: rgb(205, 154, 43);
+    color: #244f89;
+    background-color: white;
+    font-weight: bold;
 }
 
 #sendemails:hover{
@@ -94,8 +96,9 @@
 }
 
 #compres{
-    color: black;
-    background-color: rgb(216, 171, 88);
+    color: #244f89;
+    background-color: white;
+    font-weight: bold;
 }
 
 #compres:hover{
@@ -107,8 +110,9 @@
 }
 
 #behav{
-    color: black;
-    background-color: rgb(230, 230, 100);
+    color: #244f89;
+    background-color: white;
+    font-weight: bold;
 }
 
 #behav:hover{
@@ -120,8 +124,9 @@
 }
 
 #techint{
-    color: black;
-    background-color: rgb(226, 201, 40);
+    color: #244f89;
+    background-color: white;
+    font-weight: bold;
 }
 
 #techint:hover{
@@ -133,8 +138,9 @@
 }
 
 #formats{
-    color: black;
-    background-color: rgb(91, 168, 91);
+    color: #244f89;
+    background-color: white;
+    font-weight: bold;
 }
 
 #formats:hover{
@@ -152,6 +158,12 @@
 
 .gennwcont>p{
     font-size: 18px;
+    text-align: justify;
+}
+
+.gennwcont>h3{
+    font-size: 18px;
+    text-align: center;
 }
 
 .section_header{

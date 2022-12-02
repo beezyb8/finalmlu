@@ -26,10 +26,13 @@
                 <a href="dashboard.php"><i class="bi bi-house" id="dashicon"></i><br><br><p class="innernav_txt">Dashboard<p></a>
             </li>
             <li class="navbar_cont">
+                <a href="timing.php"><i class="bi bi-calendar" id="dashicon"></i><br><br><p class="innernav_txt">Timing<p></a>
+            </li>
+            <li class="navbar_cont">
                 <a href="bestpractices.php"><i class="bi bi-pass" id="dashicon"></i><br><br><p class="innernav_txt">Best Practices<p></a>
             </li>
             <li class="navbar_cont">
-            <a href="bestpractices.php"><i class="bi bi-gear" id="dashicon"></i><br><br><p class="innernav_txt">Your Account<p></a>
+            <a href="accountpage.php"><i class="bi bi-gear" id="dashicon"></i><br><br><p class="innernav_txt">Your Account<p></a>
             </li>
         </ul>
     </nav>
@@ -41,7 +44,7 @@
         <div class="pagelinks">
             <ul class="pagelinks_cont">
                 <li class="changecont" id="gennw">
-                    <p class="sectiontab">Gereral<br>Networking</p>
+                    <p class="sectiontab">General<br>Networking</p>
                 </li><li class="changecont" id="sendemails">
                     <p class="sectiontab">Email<br>Management</p>
                 </li><li class="changecont" id="compres">

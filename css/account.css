@@ -1,0 +1,18 @@
+.bodycont{
+    margin-top: 72px;
+    width: 80%;
+    border: 10px solid #244f89;
+    padding-left: 30px;
+}
+
+.accinfo_head{
+    display: inline-block;
+}
+
+.email{
+    display: inline-block;
+}
+
+.regdate{
+    display: inline-block;
+}

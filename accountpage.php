@@ -1,7 +1,8 @@
 <?php
     define('__CONFIG__', true);
     require_once "inc/config.php";
-    echo ($_SESSION['user_id']);
+
+    Page::ForceLogin();
 ?>
 
 <!DOCTYPE html>
@@ -12,9 +13,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/navbaractual.css">
-    <link rel="stylesheet" href="css/timing.css">
+    <link rel="stylesheet" href="css/account.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
 </head>
+<?php
+$user_id = (int)$_SESSION['user_id'];
+$usersql = "SELECT * FROM users WHERE user_id = :user_id";
+$userinfo = $con->prepare($usersql);
+$userinfo->bindParam('user_id', $user_id);
+$userinfo->execute();
+$user = $userinfo->fetch(PDO::FETCH_ASSOC)
+?>
 <body>
     <nav class="nav_bar_sticky">
         <div class="logocont">
@@ -36,25 +45,9 @@
         </ul>
     </nav>
     <div class="bodycont">
-        <div class="display_nav">
-            <span class="change" id="colds"><i class="bi bi-envelope" id="dashicon"></i> Cold Emails</span>
-            <span class="change" id="calls_had"><i class="bi bi-phone" id="dashicon"></i> Calls Had</span>
-            <span class="change" id="apps"><i class="bi bi-file-earmark" id="dashicon"></i> Applicatios</span>
-        </div>
-        <div class="contcont_body">
-            <div class="cont_body">
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                Yo
-            </div>
-        </div>
+        <h1>Your Account</h1>
+        <h3 class="accinfo_head">Email Address:&nbsp;&nbsp;</h3><p class="email"><?php echo $user['email']?></p><br>
+        <h3 class="accinfo_head">Registration Date:&nbsp;&nbsp;</h3><p class="regdate"><?php echo $user['reg_date']?></p><br>
     </div>
 </body>
 </html>
