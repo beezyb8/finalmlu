@@ -1,5 +1,9 @@
 GENERAL
 finalize navbar titles - (dashboard, notificaitons, best practices, your account)
+FINISH 
+    - ' error with notestxt in banknotesup - Maybe replace this or something.
+    - checked -> display in dahsboard
+
 ADD ICONS
 make navbar reactive
 

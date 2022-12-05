@@ -6,6 +6,7 @@ const writtencont = document.querySelector(".writtencont")
 const notescont = document.querySelector(".notescont")
 const contactcont = document.querySelector(".contactcont")
 const homepage = document.querySelector(".homepage")
+const appcont = document.querySelector(".app_cont")
 
 
 
@@ -36,6 +37,7 @@ $(document)
     if(!bankidlistarray.includes(thisid)){
         bankname.innerHTML = thistitle;
         writtencont.style.display = "none";
+        appcont.style.display = "block";
         banklogo.style.display = "none";
         notescont.style.display = "block";
         contactcont.style.display = "block";
@@ -45,6 +47,7 @@ $(document)
         banklogo.style.display = "block";
         notescont.style.display = "block";
         contactcont.style.display = "block";
+        appcont.style.display = "block";
         homepage.style.display = "none";
     }
 })

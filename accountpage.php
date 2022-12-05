@@ -24,6 +24,13 @@ $userinfo->bindParam('user_id', $user_id);
 $userinfo->execute();
 $user = $userinfo->fetch(PDO::FETCH_ASSOC)
 ?>
+<?php
+$userid = (int)$_SESSION['user_id'];
+$banksql = "SELECT * FROM bankorder WHERE userid = :userid order by display_order";
+$banklist = $con->prepare($banksql);
+$banklist->bindParam('userid', $userid);
+$banklist->execute();
+?>
 <body>
     <nav class="nav_bar_sticky">
         <div class="logocont">
@@ -48,6 +55,20 @@ $user = $userinfo->fetch(PDO::FETCH_ASSOC)
         <h1>Your Account</h1>
         <h3 class="accinfo_head">Email Address:&nbsp;&nbsp;</h3><p class="email"><?php echo $user['email']?></p><br>
         <h3 class="accinfo_head">Registration Date:&nbsp;&nbsp;</h3><p class="regdate"><?php echo $user['reg_date']?></p><br>
+        <div class="banklist">
+            <h3>Your Banks:</h3><p>Check off boxes to add/remove banks from your dashboard and timing page</p>
+            <div class="flex_banks">
+                <?php while($data = $banklist->fetch(PDO::FETCH_ASSOC)){ 
+                    if($data['checked'] == 1){
+                        $checked = 'checked';
+                    } else{
+                        $checked = '';
+                    }?>
+                    <span style="white-space: nowrap;" id="span_bank"><input type="checkbox"  class="checker" id="<?php echo $data['rowid'];?>" <?php echo $checked;?>><?php echo $data['bank_name'];?></span>&nbsp;&nbsp;&nbsp;&nbsp;  
+                <?php } ?>
+            </div>
+        </div>
     </div>
+    <?php require_once "inc/footer.php"; ?>
 </body>
 </html>

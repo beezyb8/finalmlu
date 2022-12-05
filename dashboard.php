@@ -48,9 +48,14 @@ $getbankshit->execute();
     <div class="bank_list_cont">
         <table class="banklisttable" id="banklist">
             <tbody class="row_position">
-            <?php while($data = $getbankshit->fetch(PDO::FETCH_ASSOC)){ ?>
-                <tr id="<?php echo $data["rowid"]?>">
-                    <td class="switch" id="<?php echo $data['bankid'];?>" value="<?php echo $data['bank_name'];?>"><?php echo $data['bank_name'];?></td>
+            <?php while($data = $getbankshit->fetch(PDO::FETCH_ASSOC)){ 
+                if($data['checked'] == 1){
+                    $display = "";
+                } else{
+                    $display = "display: none";
+                }?>
+                <tr id="<?php echo $data["rowid"]?>" style="<?php echo $display;?>">
+                    <td class="switch" id="<?php echo $data['bankid'];?>" value="<?php echo $data['bank_name'];?>"><?php echo $data['bank_name'];?><i class="bi bi-arrows-expand" id="arrows"></i></td>
                 </tr>
             <?php } ?>
                 <tr>
@@ -96,20 +101,29 @@ $getbankshit->execute();
             <p id="interviewsum">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis excepturi mollitia eos fugit ut vero aliquid soluta sed, alias iste ipsam non labore necessitatibus voluptatum, saepe, ex amet in! Velit.</p>
             <h6 id="emailformat">gang@gmail.com</h6>
         </div>
+        <div class="app_cont">
+                <form class="applinks">
+                    <h3 id="app_link">Application Link: </h3><input type="text"><br>
+                    <h3 id="app_due_date">Due Date: </h3><input type="date"><br>
+                    <button type="submit">Confrim</button>
+                </form>
+            </div>
         <div class="contactcont">
             <div class="nocontacts">No Contacts!</div>
             <table class="nworktable">
-                <tr>
-                    <th class="contacttitle">Contact Name<br><button class="editcontbtn bi bi-pencil-square" id="editbtnid"> Edit</button></th>
-                    <th class="notestitle">Notes</th>
-                    <th class="notestitle"><p class="checkboxhead">Cold Email</p></th>
-                    <th class="notestitle"><p class="checkboxhead">Call Set</p></th>
-                    <th class="notestitle"><p class="checkboxhead">Call Had</p></th>
-                    <th class="notestitle"><p class="checkboxhead">Thank You</p></th>
-                </tr>
+                <thead class="nworkhead">
+                    <tr>
+                        <th class="contact_title">Contact Name<br><button class="editcontbtn bi bi-pencil-square" id="editbtnid"> Edit</button></th>
+                        <th class="notes_tit">Notes</th>
+                        <th class="coldtitle"><p class="checkboxhead">Cold Email</p></th>
+                        <th class="calltitle"><p class="checkboxhead">Call Set</p></th>
+                        <th class="hadtitle"><p class="checkboxhead">Call Had</p></th>
+                        <th class="tytitle"><p class="checkboxhead">Thank You</p></th>
+                    </tr>
+                </thead>
                 <tbody class="table_body">
                 </tbody>
-            </table>
+            </table><br>
         <button class="newcontact">Add new contact</button>
         </div>
         <br>

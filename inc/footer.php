@@ -15,6 +15,8 @@
 <script src='../finalmlu/assets/js/textchange.js'></script>
 <script src='../finalmlu/assets/js/addbank.js'></script>
 <script src='../finalmlu/assets/js/banknotes.js'></script>
+<script src='../finalmlu/assets/js/application.js'></script>
+<script src='../finalmlu/assets/js/accountpg.js'></script>
 
 
 

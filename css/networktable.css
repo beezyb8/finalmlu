@@ -6,39 +6,70 @@
     display: none;
 }
 
-table,th,td{
-    border: 2px solid;
+.nworktable{
+    display: inline-block;
+    width: 95%;
+    margin-left: 20px;
     border-collapse: collapse;
+    border: 2px solid black;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: rgb(234, 234, 234);
+}
+
+.nworktable>.nworkhead{
+    border-bottom: 3px solid black;
     width: 100%;
+}
+
+.contact_title{
+    width: 20%;
+}
+
+.notes_tit{
+    width: 60%;
 }
 
 .checkboxhead{
     margin: 5px 7px;
 }
 
+.contacttitle{
+    text-align: center;
+    font-size: 17px;
+}
+
+.table_body>tr{
+    border-bottom: 2px solid black;
+}
+
+.table_body>tr>.coldemail,
+.callsched,
+.call,
+.thankyou{
+    text-align: center;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.notes{
+    text-align: left;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
 .nocontacts{
     display: inline-block;
+    margin-left: 20px;
 }
 
-.contacttitle{
-    width: 20%;
+.newcontact{
+    margin-left: 20px;
 }
 
-.colddone{
-    background-color: orange;
-}
-
-.callscheddone{
-    background-color: yellow;
-}
-
-
-.callhaddone{
-    background-color: red;
-}
-
-.thankyoudone{
-    background-color: green;
+.contactmodal{
+    margin-left: 20px;
+    border-radius: 20px;
 }
 
 #notetextarea{
@@ -92,3 +123,21 @@ table,th,td{
     border-radius: 5px;
     border: 1px solid black;
 }
+
+.colddone{
+    background-color: orange;
+}
+
+.callscheddone{
+    background-color: yellow;
+}
+
+
+.callhaddone{
+    background-color: red;
+}
+
+.thankyoudone{
+    background-color: green;
+}
+

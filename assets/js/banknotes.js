@@ -19,11 +19,11 @@ $(document)
     .done(function ajaxDone(data) {
         var banknotehtml = "<textarea class='banknotes' id='"+data.notes.notesid+"'>"+data.notes.notestxt+"</textarea><button type='submit' id = 'banknotesbutton' class='"+data.notes.notesid+"'>Confirm Changes</button>";
         $(".banknotescont").html(banknotehtml);
-        console.log("change");
+        var appform = document.querySelector(".applinks");
+        appform.setAttribute("id",data.notes.notesid);
     })
 
     .fail(function ajaxFailed() {
-        console.log("Not")
     })
 })
 
@@ -37,7 +37,6 @@ $(document)
 confirmbutton.onclick = () => {
     var upnotes = thistextbox.val();
     console.log(upnotes)
-    console.log(noteid)
 
     var update = {
         notesid: noteid,
@@ -54,6 +53,7 @@ confirmbutton.onclick = () => {
     .done(function ajaxDone(data) {
         confirmbutton.style.display = "none";
         thistextbox.css("height", "50px");
+        console.log("yo")
         })
     .fail(function ajaxFailed(data) {
         console.log('fail');

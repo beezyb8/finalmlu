@@ -16,3 +16,16 @@
 .regdate{
     display: inline-block;
 }
+
+.flex_banks{
+    display: flexbox;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#span_bank{
+    display: inline-block;
+    width: 18%;
+    font-size: 18px;
+    margin: 2px;
+}
